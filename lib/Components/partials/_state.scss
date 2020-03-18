@@ -1,0 +1,29 @@
+.slide-left {
+  left: -25% !important;
+  transition: left 250ms ease-in-out;
+}
+
+.link--hidden {
+  transform: rotateZ(-90deg);
+  transition: transform 150ms ease-in-out;
+}
+
+.hidden {
+  display: none;
+  // opacity: 0;
+  // z-index: -5;
+  // max-height: 0px;
+  // transition: opacity 250ms ease-in-out, max-height 750ms ease-in-out;
+}
+
+span.icon--toggle {
+  margin-right: 5px;
+  cursor: pointer;
+  transition: transform 150ms ease-in-out;
+  display: inline-block;
+}
+
+.current-link {
+  border-radius: 3px;
+  padding: 5px;
+}

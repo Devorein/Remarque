@@ -1,0 +1,294 @@
+.light {
+  color: $light-primary-text-color;
+  background-color: $light-primary-bg-color;
+
+  .TOC {
+    background: darken($light-primary-bg-color, 5%);
+    .toc-item {
+      &:hover {
+        background-color: $light-primary-bg-color;
+      }
+    }
+    .toc--L2-item {
+      color: $light-TOC-item-color;
+    }
+    .toc--L3-item {
+      color: lighten($light-TOC-item-color, 5%);
+    }
+    .toc--L4-item {
+      color: lighten($light-TOC-item-color, 8%);
+    }
+    .toc--L5-item {
+      color: lighten($light-TOC-item-color, 10%);
+    }
+
+    .toggle-container {
+      background: darken($light-primary-bg-color, 10%);
+      .toggle--button {
+        color: $light-primary-text-color;
+        background: darken($light-primary-bg-color, 5%);
+      }
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $light-header-item-color;
+  }
+  #chapter-name {
+    background-color: darken($light-primary-bg-color, 5%);
+  }
+
+  .warning-block {
+    background: darken($light-primary-bg-color, 5%);
+  }
+
+  pre {
+    background: darken($light-primary-bg-color, 10%);
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: darken($light-scrollbar-color, 25%);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $light-scrollbar-color;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $light-scrollbar-color;
+  }
+
+  code,
+  kbd,
+  pre,
+  samp {
+    background: darken($light-primary-bg-color, 10%);
+    color: $light-primary-text-color;
+  }
+  span.output-line-number {
+    background-color: darken($light-primary-bg-color, 15%);
+    color: darken($light-primary-text-color, 10%);
+  }
+
+  .current-link {
+    background-color: darken($light-primary-bg-color, 15%) !important;
+  }
+
+  .block-container {
+    background-color: darken($light-primary-bg-color, 5%);
+  }
+  h1.block-header {
+    background-color: darken($light-primary-bg-color, 15%);
+  }
+  #overlay .text-block {
+    background-color: lighten($light-primary-bg-color, 5%);
+  }
+  ul.TOC--L1 > li {
+    & > span.TOC-link:hover {
+      background-color: darken($light-primary-bg-color, 10%);
+      transition: background-color 250ms ease-in-out, padding 250ms ease-in-out;
+    }
+  }
+
+  ul.TOC--L2 > li {
+    & > span.TOC-link:hover {
+      background-color: darken($light-primary-bg-color, 15%);
+      transition: background-color 250ms ease-in-out, padding 250ms ease-in-out;
+    }
+  }
+
+  ul.TOC--L3 > li {
+    & > span.TOC-link:hover {
+      background-color: darken($light-primary-bg-color, 20%);
+      transition: background-color 250ms ease-in-out, padding 250ms ease-in-out;
+    }
+  }
+  .topic-container {
+    background: lighten($light-primary-bg-color, 10%);
+
+    .topic-header {
+      background: lighten($light-primary-bg-color, 5%);
+    }
+
+    .subtopic-container {
+      background: lighten($light-primary-bg-color, 5%);
+
+      .subtopic-header {
+        background: $light-primary-bg-color;
+      }
+
+      .subtopicL2-container {
+        background: $light-primary-bg-color;
+
+        .subtopicL2-header {
+          background: darken($light-primary-bg-color, 5%);
+        }
+
+        .subtopicL3-container {
+          background: darken($light-primary-bg-color, 5%);
+
+          .subtopicL3-header {
+            background: darken($light-primary-bg-color, 10%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.dark {
+  color: $dark-primary-text-color;
+  background-color: $dark-primary-bg-color;
+
+  .TOC {
+    background: darken($dark-primary-bg-color, 5%);
+
+    .toc-item {
+      &:hover {
+        background-color: $dark-primary-bg-color;
+      }
+    }
+
+    .toc--L2-item {
+      color: $dark-TOC-item-color;
+    }
+    .toc--L3-item {
+      color: lighten($dark-TOC-item-color, 5%);
+    }
+    .toc--L4-item {
+      color: lighten($dark-TOC-item-color, 8%);
+    }
+    .toc--L5-item {
+      color: lighten($dark-TOC-item-color, 10%);
+    }
+
+    .toggle-container {
+      background: darken($dark-primary-bg-color, 10%);
+      .toggle--button {
+        color: $dark-primary-text-color;
+        background: darken($dark-primary-bg-color, 5%);
+      }
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $dark-header-item-color;
+  }
+
+  #chapter-name {
+    background-color: darken($dark-primary-bg-color, 5%);
+  }
+
+  .warning-block {
+    background: darken($dark-primary-bg-color, 5%);
+  }
+
+  pre {
+    background: darken($dark-primary-bg-color, 10%);
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: darken($dark-scrollbar-color, 25%);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $dark-scrollbar-color;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $dark-scrollbar-color;
+  }
+
+  code,
+  kbd,
+  pre,
+  samp {
+    background: darken($dark-primary-bg-color, 10%);
+    color: $dark-primary-text-color;
+  }
+  span.output-line-number {
+    background-color: darken($dark-primary-bg-color, 15%);
+    color: darken($dark-primary-text-color, 10%);
+  }
+
+  .current-link {
+    background-color: darken($dark-primary-bg-color, 15%) !important;
+  }
+
+  .block-container {
+    background-color: darken($dark-primary-bg-color, 5%);
+  }
+  h1.block-header {
+    background-color: darken($dark-primary-bg-color, 15%);
+  }
+  #overlay .text-block {
+    background-color: lighten($dark-primary-bg-color, 5%);
+  }
+  ul.TOC--L1 > li {
+    & > span.TOC-link:hover {
+      background-color: darken($dark-primary-bg-color, 10%);
+      transition: background-color 250ms ease-in-out, padding 250ms ease-in-out;
+    }
+  }
+
+  ul.TOC--L2 > li {
+    & > span.TOC-link:hover {
+      background-color: darken($dark-primary-bg-color, 15%);
+      transition: background-color 250ms ease-in-out, padding 250ms ease-in-out;
+    }
+  }
+
+  ul.TOC--L3 > li {
+    & > span.TOC-link:hover {
+      background-color: darken($dark-primary-bg-color, 20%);
+      transition: background-color 250ms ease-in-out, padding 250ms ease-in-out;
+    }
+  }
+  .topic-container {
+    background: lighten($dark-primary-bg-color, 10%);
+
+    .topic-header {
+      background: lighten($dark-primary-bg-color, 5%);
+    }
+
+    .subtopic-container {
+      background: lighten($dark-primary-bg-color, 5%);
+
+      .subtopic-header {
+        background: $dark-primary-bg-color;
+      }
+
+      .subtopicL2-container {
+        background: $dark-primary-bg-color;
+
+        .subtopicL2-header {
+          background: darken($dark-primary-bg-color, 5%);
+        }
+
+        .subtopicL3-container {
+          background: darken($dark-primary-bg-color, 5%);
+
+          .subtopicL3-header {
+            background: darken($dark-primary-bg-color, 10%);
+          }
+        }
+      }
+    }
+  }
+}

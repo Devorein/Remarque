@@ -1,0 +1,180 @@
+pre {
+  display: block;
+  position: relative;
+  word-break: break-all;
+  word-wrap: break-word;
+  margin: 0px;
+}
+
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  white-space: pre-wrap;
+  border-radius: 0;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1 {
+  margin: 0.67em 0;
+}
+
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: $code-font, monospace;
+  padding: 3px;
+}
+
+html {
+  font-size: 0.875em;
+}
+html,
+body {
+  font-family: "Fira Sans";
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+ul,
+ol {
+  padding-inline-start: 20px;
+  margin-bottom: 0.83999rem;
+  padding-top: 0.16001rem;
+  font-size: 16px;
+  margin: 5px;
+}
+li {
+  font-feature-settings: "kern" 1, "onum" 1, "liga" 1;
+  margin-left: 1rem;
+  list-style-type: decimal;
+}
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+p {
+  padding-top: 0.66001rem;
+  font-feature-settings: "kern" 1, "onum" 1, "liga" 1;
+  margin-top: 0;
+}
+p {
+  margin-bottom: 1.33999rem;
+}
+
+pre {
+  user-select: none;
+  font-size: 1rem;
+  padding: 0.66001rem 9.5px 9.5px;
+  line-height: 2rem;
+  background-size: 100% 4rem;
+  border-color: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-feature-settings: "dlig" 1, "liga" 1, "lnum" 1, "kern" 1;
+  font-style: normal;
+  font-weight: 600;
+  margin-top: 0;
+}
+h1 {
+  line-height: 3rem;
+  font-size: 2.0571429rem;
+  margin-bottom: 0.21999rem;
+  padding-top: 0.78001rem;
+}
+h2 {
+  font-size: 1.953125rem;
+  margin-bottom: 0.1835837rem;
+  padding-top: 0.8164163rem;
+}
+h2,
+h3 {
+  line-height: 3rem;
+}
+h3 {
+  font-size: 1.6457143rem;
+  margin-bottom: 0.07599rem;
+  padding-top: 0.92401rem;
+}
+h4 {
+  font-size: 1.5625rem;
+  margin-bottom: 0.546865rem;
+  padding-top: 0.453135rem;
+}
+h5 {
+  font-size: 1.25rem;
+  margin-bottom: -0.56251rem;
+  padding-top: 0.56251rem;
+}
+h6 {
+  font-size: 1rem;
+  margin-bottom: -0.65001rem;
+  padding-top: 0.65001rem;
+}
+a {
+  cursor: pointer;
+  color: #35d7bb;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  border-bottom-color: #35d7bb;
+  color: #dff9f4;
+}
+img {
+  height: auto;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}

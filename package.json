@@ -1,0 +1,21 @@
+{
+  "name": "remarque",
+  "version": "1.0.0",
+  "description": "\"Create remarkable notes from markdown files\"",
+  "main": "manip.js",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "jsdom": "^16.2.0",
+    "showdown": "^1.9.1",
+    "yargs": "^15.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arcoden",
+  "license": "ISC",
+  "bin": {
+    "remarque": "./index.js"
+  }
+}

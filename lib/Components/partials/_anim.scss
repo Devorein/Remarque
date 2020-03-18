@@ -1,0 +1,63 @@
+.highlight {
+  animation: highlight 1000ms ease-in-out;
+}
+
+@keyframes highlight {
+  0% {
+    background-color: rgba(0, 0, 0, 0.226);
+  }
+  50% {
+    background-color: rgba(51, 51, 51, 0.219);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.226);
+  }
+}
+
+.low--highlight {
+  animation: lowhighlight 1000ms ease-in-out;
+}
+
+@keyframes lowhighlight {
+  0% {
+    background: rgba($highlight-low, 0.25);
+  }
+  50% {
+    background: rgba($highlight-low, 0.15);
+  }
+  100% {
+    background: rgba($highlight-low, 0.25);
+  }
+}
+
+.medium--highlight {
+  animation: mediumhighlight 1000ms ease-in-out;
+}
+
+@keyframes mediumhighlight {
+  0% {
+    background: rgba($highlight-mid, 0.25);
+  }
+  50% {
+    background: rgba($highlight-mid, 0.15);
+  }
+  100% {
+    background: rgba($highlight-mid, 0.25);
+  }
+}
+
+.high--highlight {
+  animation: highhighlight 1000ms ease-in-out;
+}
+
+@keyframes highhighlight {
+  0% {
+    background: rgba($highlight-high, 0.25);
+  }
+  50% {
+    background: rgba($highlight-high, 0.15);
+  }
+  100% {
+    background: rgba($highlight-high, 0.25);
+  }
+}
