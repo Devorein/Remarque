@@ -81,6 +81,10 @@
     background-color: lighten($global-blue, 15%);
     color: darken($light-primary-text-color, 10%);
   }
+  span.error-line-number {
+    background-color: lighten($global-red, 15%);
+    color: darken($light-primary-text-color, 10%);
+  }
 
   .current-link {
     background-color: darken($light-primary-bg-color, 15%) !important;
@@ -232,6 +236,10 @@
   }
   span.input-line-number {
     background-color: darken($global-blue, 15%);
+    color: darken($dark-primary-text-color, 10%);
+  }
+  span.error-line-number {
+    background-color: darken($global-red, 15%);
     color: darken($dark-primary-text-color, 10%);
   }
 

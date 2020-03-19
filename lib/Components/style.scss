@@ -188,7 +188,9 @@ pre[class*="language-"] {
 }
 
 span.output-line-number,
-span.input-line-number {
+span.input-line-number,
+span.error-line-number
+ {
   padding: 3px;
   border-radius: 2px;
   margin-right: 5px;
