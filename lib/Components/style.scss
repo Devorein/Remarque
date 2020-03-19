@@ -187,7 +187,8 @@ pre[class*="language-"] {
   display: none;
 }
 
-span.output-line-number {
+span.output-line-number,
+span.input-line-number {
   padding: 3px;
   border-radius: 2px;
   margin-right: 5px;

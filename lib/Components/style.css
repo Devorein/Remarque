@@ -68,6 +68,10 @@
   background-color: #a6a6a6;
   color: #1a1a1a;
 }
+.light span.input-line-number {
+  background-color: #629df5;
+  color: #1a1a1a;
+}
 .light .current-link {
   background-color: #a6a6a6 !important;
 }
@@ -184,6 +188,10 @@
 }
 .dark span.output-line-number {
   background-color: #0d0d0d;
+  color: #b0bacf;
+}
+.dark span.input-line-number {
+  background-color: #0c4eb2;
   color: #b0bacf;
 }
 .dark .current-link {
@@ -1106,7 +1114,8 @@ pre[class*=language-] {
   display: none;
 }
 
-span.output-line-number {
+span.output-line-number,
+span.input-line-number {
   padding: 3px;
   border-radius: 2px;
   margin-right: 5px;

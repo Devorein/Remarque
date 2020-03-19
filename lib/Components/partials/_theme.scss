@@ -77,6 +77,10 @@
     background-color: darken($light-primary-bg-color, 15%);
     color: darken($light-primary-text-color, 10%);
   }
+  span.input-line-number {
+    background-color: lighten($global-blue, 15%);
+    color: darken($light-primary-text-color, 10%);
+  }
 
   .current-link {
     background-color: darken($light-primary-bg-color, 15%) !important;
@@ -224,6 +228,10 @@
   }
   span.output-line-number {
     background-color: darken($dark-primary-bg-color, 15%);
+    color: darken($dark-primary-text-color, 10%);
+  }
+  span.input-line-number {
+    background-color: darken($global-blue, 15%);
     color: darken($dark-primary-text-color, 10%);
   }
 
