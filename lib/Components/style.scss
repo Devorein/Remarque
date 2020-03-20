@@ -57,7 +57,7 @@ body#preview {
     padding: 10px 0px 0px 15px;
     cursor: pointer;
     font-size: $base-font-size;
-    height: calc(100vh - 75px);
+    height: calc(100vh - 125px);
     overflow: auto;
 
     .toc-item {
@@ -126,7 +126,7 @@ div#page-extreme-icon {
 .icon--copy {
   position: absolute;
   top: 0px;
-  left: 710px;
+  left: calc(100% - 40px);
   padding: 5px;
   font-size: 20px;
   cursor: pointer;
@@ -300,6 +300,7 @@ span.highlight--high {
 pre.output-block {
   width: 100%;
   overflow-x: auto;
+  flex: 35%;
 }
 
 li > ul {
