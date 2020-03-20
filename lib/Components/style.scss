@@ -251,22 +251,29 @@ span.highlight--high {
 }
 
 .highlight-line--low {
-  background: rgba($highlight-low, 0.75);
+  background: rgba($highlight-low, 0.25);
 }
 
 .highlight-line--medium {
-  background: rgba($highlight-mid, 0.75);
+  background: rgba($highlight-mid, 0.25);
 }
 
 .highlight-line--high {
-  background: rgba($highlight-high, 0.75);
+  background: rgba($highlight-high, 0.25);
 }
 
 .code-call-line-number--1 {
-  background-color: rgba($global-yellow,0.75);
+  background-color: rgba($global-yellow,0.25);
 }
 .code-call-line-number--2 {
-  background-color: rgba($global-orange,0.75);
+  background-color: rgba($global-orange,0.25);
+}
+
+.code-error-line-number{
+  background-color: rgba($global-red,0.25);
+}
+.code-input-line-number {
+  background-color: rgba($global-blue,0.25);
 }
 
 .explanation-lines li {
