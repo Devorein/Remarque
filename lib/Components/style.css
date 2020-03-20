@@ -781,6 +781,7 @@ pre[class*=language-] {
   word-break: normal;
   word-wrap: normal;
   line-height: 1.5;
+  margin: 5px;
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
@@ -1144,7 +1145,6 @@ div#page-extreme-icon {
 }
 
 pre[class*=language-] {
-  margin: 0px;
   margin-right: 10px !important;
   flex-grow: 1;
   max-height: 500px;
@@ -1153,6 +1153,14 @@ pre[class*=language-] {
 
 .hide {
   display: none;
+}
+
+div#code-display-icon {
+  padding: 5px;
+  font-weight: bolder;
+  font-size: 1.5em;
+  cursor: pointer;
+  position: absolute;
 }
 
 span.output-line-number,
