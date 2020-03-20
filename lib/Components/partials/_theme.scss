@@ -4,6 +4,11 @@
 
   .TOC {
     background: darken($light-primary-bg-color, 5%);
+
+    input#tocInputField{
+      background-color: darken($light-primary-bg-color, 15%);
+      color: $light-primary-text-color;
+    }
     .toc-item {
       &:hover {
         background-color: $light-primary-bg-color;
@@ -167,7 +172,10 @@
 
   .TOC {
     background: darken($dark-primary-bg-color, 5%);
-
+    input#tocInputField{
+      background-color: darken($dark-primary-bg-color, 15%);
+      color: $dark-primary-text-color;
+    }
     .toc-item {
       &:hover {
         background-color: $dark-primary-bg-color;

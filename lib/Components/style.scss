@@ -412,3 +412,17 @@ div.topic-container {
     }
   }
 }
+
+input#tocInputField {
+  width: 75%;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+  margin: 5px;
+  border: none;
+  outline: none;
+  height: 25px;
+  text-align:center;
+  font-weight: bold;
+  font-size: 1.2em;
+}

@@ -9,6 +9,10 @@
 .light .TOC {
   background: #bfbfbf;
 }
+.light .TOC input#tocInputField {
+  background-color: #a6a6a6;
+  color: #333;
+}
 .light .TOC .toc-item:hover {
   background-color: #ccc;
 }
@@ -142,6 +146,10 @@
 }
 .dark .TOC {
   background: #262626;
+}
+.dark .TOC input#tocInputField {
+  background-color: #0d0d0d;
+  color: #d0d6e2;
 }
 .dark .TOC .toc-item:hover {
   background-color: #333;
@@ -1333,6 +1341,20 @@ div.topic-container .subtopic-container .subtopicL2-container .subtopicL3-contai
   text-align: center;
   font-weight: 500;
   margin-bottom: 10px;
+}
+
+input#tocInputField {
+  width: 75%;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+  margin: 5px;
+  border: none;
+  outline: none;
+  height: 25px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
 /*# sourceMappingURL=style.css.map */
