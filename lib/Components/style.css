@@ -76,11 +76,11 @@
   background-color: #ff624d;
   color: #1a1a1a;
 }
-.light span.call-line-number--1 {
+.light .call-line-number--1 {
   background-color: #f7f314;
   color: #1a1a1a;
 }
-.light span.call-line-number--2 {
+.light .call-line-number--2 {
   background-color: #f59a13;
   color: #1a1a1a;
 }
@@ -210,11 +210,11 @@
   background-color: #b31500;
   color: #b0bacf;
 }
-.dark span.call-line-number--1 {
+.dark .call-line-number--1 {
   background-color: #f7f314;
   color: #1a1a1a;
 }
-.dark span.call-line-number--2 {
+.dark .call-line-number--2 {
   background-color: #f59a13;
   color: #1a1a1a;
 }
@@ -1204,15 +1204,23 @@ span.highlight--high {
 }
 
 .highlight-line--low {
-  background: rgba(3, 202, 63, 0.15);
+  background: rgba(3, 202, 63, 0.75);
 }
 
 .highlight-line--medium {
-  background: rgba(255, 238, 0, 0.15);
+  background: rgba(255, 238, 0, 0.75);
 }
 
 .highlight-line--high {
-  background: rgba(255, 30, 0, 0.15);
+  background: rgba(255, 30, 0, 0.75);
+}
+
+.code-call-line-number--1 {
+  background-color: rgba(247, 243, 20, 0.75);
+}
+
+.code-call-line-number--2 {
+  background-color: rgba(245, 154, 19, 0.75);
 }
 
 .explanation-lines li {

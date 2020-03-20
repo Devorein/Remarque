@@ -86,11 +86,11 @@
     color: darken($light-primary-text-color, 10%);
   }
 
-  span.call-line-number--1 {
+  .call-line-number--1 {
     background-color: $global-yellow;
     color: darken($light-primary-text-color, 10%);
   }
-  span.call-line-number--2 {
+  .call-line-number--2 {
     background-color: $global-orange;
     color: darken($light-primary-text-color, 10%);
   }
@@ -251,11 +251,11 @@
     background-color: darken($global-red, 15%);
     color: darken($dark-primary-text-color, 10%);
   }
-  span.call-line-number--1 {
+  .call-line-number--1 {
     background-color: $global-yellow;
     color: darken($light-primary-text-color, 10%);
   }
-  span.call-line-number--2 {
+  .call-line-number--2 {
     background-color: $global-orange;
     color: darken($light-primary-text-color, 10%);
   }

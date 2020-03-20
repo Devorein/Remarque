@@ -251,15 +251,22 @@ span.highlight--high {
 }
 
 .highlight-line--low {
-  background: rgba($highlight-low, 0.15);
+  background: rgba($highlight-low, 0.75);
 }
 
 .highlight-line--medium {
-  background: rgba($highlight-mid, 0.15);
+  background: rgba($highlight-mid, 0.75);
 }
 
 .highlight-line--high {
-  background: rgba($highlight-high, 0.15);
+  background: rgba($highlight-high, 0.75);
+}
+
+.code-call-line-number--1 {
+  background-color: rgba($global-yellow,0.75);
+}
+.code-call-line-number--2 {
+  background-color: rgba($global-orange,0.75);
 }
 
 .explanation-lines li {

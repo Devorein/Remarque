@@ -137,7 +137,7 @@ pre[data-line] {
 	background: linear-gradient(to right, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
 	pointer-events: none;
 	line-height: inherit;
-	white-space: pre;
+  white-space: pre;
 }
 
 .line-highlight:before,
