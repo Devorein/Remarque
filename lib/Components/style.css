@@ -1059,13 +1059,23 @@ p.image-block {
   justify-content: center;
 }
 
-#theme-icon {
+#theme-icon,
+div#page-extreme-icon {
   position: absolute;
-  width: 30px;
-  left: calc(100% - 10px);
-  transform: translateX(calc(-100%));
-  top: 0px;
+  left: calc(100% - 25px);
   cursor: pointer;
+}
+
+#theme-icon {
+  width: 30px;
+  transform: translateX(calc(-100%));
+  left: calc(100% - 10px);
+  top: 0px;
+}
+
+div#page-extreme-icon {
+  width: 10px;
+  top: 35px;
 }
 
 .icon--copy {
