@@ -225,49 +225,41 @@ span.call-line-number {
 }
 
 // : Change linenumber and line classes
-span.highlight--low {
-  color: black;
-  background: rgba($highlight-low, 0.75);
-  border-radius: 3px;
-  font-size: 16px;
-  min-width: 30px;
-  text-align: center;
-  cursor: pointer;
-  padding: 3px;
-}
-
-span.highlight--medium {
-  color: black;
-  background: rgba($highlight-mid, 0.75);
-  border-radius: 3px;
-  font-size: 16px;
-  min-width: 30px;
-  text-align: center;
-  cursor: pointer;
-  padding: 3px;
-}
-
+span.highlight--low,
+span.highlight--medium,
 span.highlight--high {
   color: black;
-  background: rgba($highlight-high, 0.75);
   border-radius: 3px;
   font-size: 16px;
   min-width: 30px;
   text-align: center;
   cursor: pointer;
   padding: 3px;
+  margin-right: 5px;
 }
 
-div.highlight--low {
-  background: rgba($highlight-low, 0.25);
+.highlight--low {
+  background: rgba($highlight-low, 0.75);
 }
 
-div.highlight--medium {
-  background: rgba($highlight-mid, 0.25);
+.highlight--medium {
+  background: rgba($highlight-mid, 0.75);
 }
 
-div.highlight--high {
-  background: rgba($highlight-high, 0.25);
+.highlight--high {
+  background: rgba($highlight-high, 0.75);
+}
+
+.highlight-line--low {
+  background: rgba($highlight-low, 0.15);
+}
+
+.highlight-line--medium {
+  background: rgba($highlight-mid, 0.15);
+}
+
+.highlight-line--high {
+  background: rgba($highlight-high, 0.15);
 }
 
 .explanation-lines li {
