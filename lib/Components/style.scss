@@ -189,13 +189,14 @@ pre[class*="language-"] {
 
 span.output-line-number,
 span.input-line-number,
-span.error-line-number
- {
+span.error-line-number,
+span.call-line-number {
   padding: 3px;
   border-radius: 2px;
   margin-right: 5px;
   line-height: 30px;
   cursor: pointer;
+  font-weight: bolder;
 }
 
 .header--topic {

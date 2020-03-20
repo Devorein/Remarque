@@ -76,6 +76,14 @@
   background-color: #ff624d;
   color: #1a1a1a;
 }
+.light span.call-line-number--1 {
+  background-color: #f7f314;
+  color: #1a1a1a;
+}
+.light span.call-line-number--2 {
+  background-color: #f59a13;
+  color: #1a1a1a;
+}
 .light .current-link {
   background-color: #a6a6a6 !important;
 }
@@ -201,6 +209,14 @@
 .dark span.error-line-number {
   background-color: #b31500;
   color: #b0bacf;
+}
+.dark span.call-line-number--1 {
+  background-color: #f7f314;
+  color: #1a1a1a;
+}
+.dark span.call-line-number--2 {
+  background-color: #f59a13;
+  color: #1a1a1a;
 }
 .dark .current-link {
   background-color: #0d0d0d !important;
@@ -1124,12 +1140,14 @@ pre[class*=language-] {
 
 span.output-line-number,
 span.input-line-number,
-span.error-line-number {
+span.error-line-number,
+span.call-line-number {
   padding: 3px;
   border-radius: 2px;
   margin-right: 5px;
   line-height: 30px;
   cursor: pointer;
+  font-weight: bolder;
 }
 
 .header--topic {
