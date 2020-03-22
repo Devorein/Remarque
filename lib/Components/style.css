@@ -414,6 +414,7 @@ pre code {
   color: inherit;
   white-space: pre-wrap;
   border-radius: 0;
+  display: inherit;
 }
 
 a:active,
@@ -987,6 +988,7 @@ pre[class*=language-].line-numbers {
   padding-left: 3.8em;
   counter-reset: linenumber;
   overflow: hidden;
+  margin-right: 5px;
 }
 
 pre[class*=language-].line-numbers > code {
@@ -1134,7 +1136,9 @@ div#slider {
 }
 
 .snippet-block {
-  max-width: 500px;
+  min-width: 500px;
+  width: 50%;
+  max-width: 750px;
 }
 
 pre[class*=language-] {

@@ -111,7 +111,9 @@ div#slider {
 }
 
 .snippet-block {
-  max-width: 500px;
+  min-width: 500px;
+  width: 50%;
+  max-width: 750px;
 }
 
 pre[class*="language-"] {
