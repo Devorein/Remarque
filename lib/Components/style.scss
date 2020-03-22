@@ -35,7 +35,7 @@ body#preview {
   font-size: 1rem;
   font-weight: 400;
   line-height: 2rem;
-  width: fit-content;
+  width: 100vw;
   height: fit-content;
   overflow: hidden;
   margin: 0px;
@@ -146,7 +146,7 @@ div#page-extreme-icon {
   position: absolute;
   cursor: pointer;
   font-size: 2em;
-  left: 350px;
+  left: 100%;
   top: 50%;
   transform: translateY(-50%);
   user-select: none;
@@ -169,6 +169,18 @@ div#page-extreme-icon {
   width: calc(100% - 350px);
   overflow-x: hidden;
   transition: left 250ms ease-in-out;
+  z-index: -1;
+}
+
+div#slider {
+  width: 25px;
+  height: 100vh;
+  background: #1a1a1a;
+  position: absolute;
+  top: 0px;
+  left: 100%;
+  cursor: pointer;
+  z-index: 0;
 }
 
 .code-block,
@@ -433,4 +445,19 @@ input#tocInputField {
   text-align:center;
   font-weight: bold;
   font-size: 1.2em;
+}
+
+.dropzone{
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+}
+
+#dropzone-right{
+  left: 100%;
+  transform: translate(-100%);
+}
+
+#dropzone-left{
+  left: 0%;
 }
