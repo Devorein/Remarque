@@ -4,7 +4,6 @@
 @import "./partials/state";
 @import "./partials/init";
 @import "./partials/anim";
-@import "./partials/code";
 @import "./partials/prism";
 
 #overlay {
@@ -70,7 +69,7 @@ div#page-extreme-icon {
   padding: 5px;
   font-size: 20px;
   cursor: pointer;
-  z-index: 5;
+  z-index: 7;
   transform: scale(1);
   transition: transform 250ms ease-in-out;
 

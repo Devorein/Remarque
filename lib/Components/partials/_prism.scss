@@ -390,20 +390,23 @@ pre[class*="language-"].line-numbers {
   position: relative;
   padding-left: 3.8em;
   counter-reset: linenumber;
+  overflow: hidden;
 }
 
 pre[class*="language-"].line-numbers > code {
   position: relative;
   white-space: inherit;
   z-index: 7;
+  display: inherit;
+  overflow: auto
 }
 
 .line-numbers .line-numbers-rows {
   position: absolute;
   pointer-events: none;
-  top: 0;
+  top: calc(1em + 5px);
   font-size: 100%;
-  left: -3.8em;
+  left: 0px;
   width: 3em;
   /* works for line-numbers below 1000 lines */
   letter-spacing: -1px;
