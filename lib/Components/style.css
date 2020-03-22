@@ -1023,6 +1023,7 @@ pre[class*=language-].line-numbers > code {
   z-index: 7;
   display: inherit;
   overflow: auto;
+  height: 100%;
 }
 
 .line-numbers .line-numbers-rows {

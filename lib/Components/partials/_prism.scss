@@ -399,7 +399,8 @@ pre[class*="language-"].line-numbers > code {
   white-space: inherit;
   z-index: 7;
   display: inherit;
-  overflow: auto
+  overflow: auto;
+  height: 100%;
 }
 
 .line-numbers .line-numbers-rows {
