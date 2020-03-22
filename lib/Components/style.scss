@@ -57,7 +57,7 @@ body#preview {
     padding: 10px 0px 0px 15px;
     cursor: pointer;
     font-size: $base-font-size;
-    height: calc(100vh - 125px);
+    height: calc(100vh - 75px);
     overflow: auto;
 
     .toc-item {
@@ -205,7 +205,7 @@ pre[class*="language-"] {
   display: none;
 }
 
-div#code-display-icon {
+div#codeDisplayIcon {
   padding: 5px;
   font-weight: bolder;
   font-size: 1.5em;
@@ -281,27 +281,27 @@ span.highlight--high {
   background: rgba($highlight-high, 0.25);
 }
 
-div[class*="highlight-line"]{
+div[class*="highlight-line"] {
   width: 75%;
   z-index: 6;
 }
 
-div[class$="line-number"]{
+div[class$="line-number"] {
   z-index: 5;
 }
 
 .code-call-line-number--1 {
-  background-color: rgba($global-yellow,0.25);
+  background-color: rgba($global-yellow, 0.25);
 }
 .code-call-line-number--2 {
-  background-color: rgba($global-orange,0.25);
+  background-color: rgba($global-orange, 0.25);
 }
 
-.code-error-line-number{
-  background-color: rgba($global-red,0.35);
+.code-error-line-number {
+  background-color: rgba($global-red, 0.35);
 }
 .code-input-line-number {
-  background-color: rgba($global-blue,0.25);
+  background-color: rgba($global-blue, 0.25);
 }
 
 .explanation-lines li {
@@ -389,14 +389,6 @@ ul.TOC--L3 > li {
   padding: 0px;
 }
 
-.icon--custom-toggle {
-  font-size: 2em;
-  cursor: pointer;
-  background: black;
-  display: flex;
-  justify-content: center;
-}
-
 %pad10mar10 {
   padding: 10px;
   margin-bottom: 10px;
@@ -442,31 +434,49 @@ div.topic-container {
   }
 }
 
-input#tocInputField {
-  width: 75%;
-  left: 50%;
-  position: relative;
-  transform: translateX(-50%);
-  margin: 5px;
-  border: none;
-  outline: none;
-  height: 25px;
-  text-align:center;
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-.dropzone{
+.dropzone {
   height: 100vh;
   position: absolute;
   top: 0px;
 }
 
-#dropzone-right{
+#dropzone-right {
   left: 100%;
   transform: translate(-100%);
 }
 
-#dropzone-left{
+#dropzone-left {
   left: 0%;
+}
+
+div#tocSearchContainer {
+  display: flex;
+  input#tocInputField {
+    width: 75%;
+    position: relative;
+    margin-right: 5px;
+    border: none;
+    outline: none;
+    height: 25px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  #tocCodeSearch {
+    height: 25px;
+    cursor: pointer;
+    user-select: none;
+    background: rgba($global-red, .75);
+    border-radius: 5px;
+  }
+  #tocToggleCustom {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  & > * {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
 }

@@ -1,6 +1,11 @@
+@import "./glovars";
 .slide-left {
   left: -100% !important;
   transition: left 250ms ease-in-out;
+}
+
+.code-shown{
+  background: rgba($global-green,.75) !important;
 }
 
 .link--hidden {

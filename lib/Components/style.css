@@ -272,6 +272,10 @@
   transition: left 250ms ease-in-out;
 }
 
+.code-shown {
+  background: rgba(3, 202, 63, 0.75) !important;
+}
+
 .link--hidden {
   transform: rotateZ(-90deg);
   transition: transform 150ms ease-in-out;
@@ -1086,7 +1090,7 @@ pre[class*=language-].line-numbers {
 pre[class*=language-].line-numbers > code {
   position: relative;
   white-space: inherit;
-  z-index: 5;
+  z-index: 7;
 }
 
 .line-numbers .line-numbers-rows {
@@ -1168,7 +1172,7 @@ body#preview {
   padding: 10px 0px 0px 15px;
   cursor: pointer;
   font-size: 18px;
-  height: calc(100vh - 125px);
+  height: calc(100vh - 75px);
   overflow: auto;
 }
 .TOC .toc--L1 .toc-item {
@@ -1313,7 +1317,7 @@ pre[class*=language-] {
   display: none;
 }
 
-div#code-display-icon {
+div#codeDisplayIcon {
   padding: 5px;
   font-weight: bolder;
   font-size: 1.5em;
@@ -1497,14 +1501,6 @@ ul.TOC--L3 > li > span.TOC-link {
   padding: 0px;
 }
 
-.icon--custom-toggle {
-  font-size: 2em;
-  cursor: pointer;
-  background: black;
-  display: flex;
-  justify-content: center;
-}
-
 div.topic-container .subtopic-container .subtopicL2-container .subtopicL3-container, div.topic-container .subtopic-container .subtopicL2-container, div.topic-container .subtopic-container, div.topic-container {
   padding: 10px;
   margin-bottom: 10px;
@@ -1516,20 +1512,6 @@ div.topic-container .subtopic-container .subtopicL2-container .subtopicL3-contai
   text-align: center;
   font-weight: 500;
   margin-bottom: 10px;
-}
-
-input#tocInputField {
-  width: 75%;
-  left: 50%;
-  position: relative;
-  transform: translateX(-50%);
-  margin: 5px;
-  border: none;
-  outline: none;
-  height: 25px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.2em;
 }
 
 .dropzone {
@@ -1545,6 +1527,37 @@ input#tocInputField {
 
 #dropzone-left {
   left: 0%;
+}
+
+div#tocSearchContainer {
+  display: flex;
+}
+div#tocSearchContainer input#tocInputField {
+  width: 75%;
+  position: relative;
+  margin-right: 5px;
+  border: none;
+  outline: none;
+  height: 25px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+div#tocSearchContainer #tocCodeSearch {
+  height: 25px;
+  cursor: pointer;
+  user-select: none;
+  background: rgba(255, 30, 0, 0.75);
+  border-radius: 5px;
+}
+div#tocSearchContainer #tocToggleCustom {
+  cursor: pointer;
+  user-select: none;
+}
+div#tocSearchContainer > * {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
