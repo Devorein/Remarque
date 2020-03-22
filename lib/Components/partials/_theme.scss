@@ -52,10 +52,6 @@
     background: darken($light-primary-bg-color, 5%);
   }
 
-  pre {
-    background: darken($light-primary-bg-color, 10%);
-  }
-
   /* Track */
   ::-webkit-scrollbar-track {
     background: darken($light-scrollbar-color, 25%);
@@ -75,7 +71,6 @@
   kbd,
   pre,
   samp {
-    background: darken($light-primary-bg-color, 10%);
     color: $light-primary-text-color;
   }
   span.output-line-number {
@@ -221,10 +216,6 @@
     background: darken($dark-primary-bg-color, 5%);
   }
 
-  pre {
-    background: darken($dark-primary-bg-color, 10%);
-  }
-
   /* Track */
   ::-webkit-scrollbar-track {
     background: darken($dark-scrollbar-color, 25%);
@@ -244,7 +235,6 @@
   kbd,
   pre,
   samp {
-    background: darken($dark-primary-bg-color, 10%);
     color: $dark-primary-text-color;
   }
   span.output-line-number {
