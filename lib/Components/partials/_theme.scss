@@ -34,6 +34,9 @@
         background: darken($light-primary-bg-color, 5%);
       }
     }
+    #slider{
+      background: darken($light-primary-bg-color, 15%);
+    }
   }
 
   h1,
@@ -196,6 +199,10 @@
         color: $dark-primary-text-color;
         background: darken($dark-primary-bg-color, 5%);
       }
+    }
+
+    #slider{
+      background: darken($dark-primary-bg-color, 15%);
     }
   }
 

@@ -31,6 +31,7 @@
   flex-grow: 1;
   display: flex;
   justify-content: center;
+  margin-right: 5px;
 }
 .TOC #tocToggleIcon {
   height: fit-content;
@@ -130,6 +131,9 @@
 .light .TOC .toggle-container .toggle--button {
   color: #333;
   background: #bfbfbf;
+}
+.light .TOC #slider {
+  background: #a6a6a6;
 }
 .light h1,
 .light h2,
@@ -264,6 +268,9 @@
 .dark .TOC .toggle-container .toggle--button {
   color: #d0d6e2;
   background: #262626;
+}
+.dark .TOC #slider {
+  background: #0d0d0d;
 }
 .dark h1,
 .dark h2,
