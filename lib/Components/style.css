@@ -6,6 +6,16 @@
   width: 350px;
   left: 0%;
 }
+.TOC #settingsContainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: calc(100% + 25px);
+  top: 0px;
+}
+.TOC #settingsContainer > * {
+  margin: 3px;
+}
 .TOC div#tocSearchContainer {
   display: flex;
 }
@@ -32,6 +42,16 @@
   display: flex;
   justify-content: center;
   margin-right: 5px;
+}
+.TOC div#slider {
+  width: 25px;
+  height: 100vh;
+  background: #1a1a1a;
+  position: absolute;
+  top: 0px;
+  left: 100%;
+  cursor: pointer;
+  z-index: 0;
 }
 .TOC #tocToggleIcon {
   height: fit-content;
@@ -232,6 +252,9 @@
 .light .topic-container .subtopic-container .subtopicL2-container .subtopicL3-container .subtopicL3-header {
   background: #b3b3b3;
 }
+.light svg {
+  fill: #333 !important;
+}
 
 .dark {
   color: #d0d6e2;
@@ -368,6 +391,9 @@
 }
 .dark .topic-container .subtopic-container .subtopicL2-container .subtopicL3-container .subtopicL3-header {
   background: #1a1a1a;
+}
+.dark svg {
+  fill: #d0d6e2 !important;
 }
 
 .slide-left {
@@ -1069,23 +1095,10 @@ p.image-block {
   justify-content: center;
 }
 
-#theme-icon,
-div#page-extreme-icon {
-  position: absolute;
-  left: calc(100% - 25px);
-  cursor: pointer;
-}
-
 #theme-icon {
+  left: -5px;
+  position: relative;
   width: 30px;
-  transform: translateX(calc(-100%));
-  left: calc(100% - 10px);
-  top: 0px;
-}
-
-div#page-extreme-icon {
-  width: 10px;
-  top: 35px;
 }
 
 .icon--copy {
@@ -1117,17 +1130,6 @@ div#page-extreme-icon {
   z-index: -1;
 }
 
-div#slider {
-  width: 25px;
-  height: 100vh;
-  background: #1a1a1a;
-  position: absolute;
-  top: 0px;
-  left: 100%;
-  cursor: pointer;
-  z-index: 0;
-}
-
 .code-block,
 .snippet-block {
   display: flex;
@@ -1151,12 +1153,16 @@ pre[class*=language-] {
   display: none;
 }
 
+.icon {
+  user-select: none;
+  cursor: pointer;
+}
+
 div#codeDisplayIcon {
   padding: 5px;
   font-weight: bolder;
   font-size: 1.5em;
   cursor: pointer;
-  position: absolute;
 }
 
 span.output-line-number,
@@ -1169,6 +1175,15 @@ span.call-line-number {
   line-height: 30px;
   cursor: pointer;
   font-weight: bolder;
+}
+
+svg {
+  width: 20px;
+  height: 20px;
+}
+
+svg#pageExtremeTopIcon {
+  transform: rotate(180deg);
 }
 
 .header--topic {

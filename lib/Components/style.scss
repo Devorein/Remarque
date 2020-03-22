@@ -46,22 +46,21 @@ p.image-block {
   display: flex;
   justify-content: center;
 }
-#theme-icon,
-div#page-extreme-icon {
-  position: absolute;
-  left: calc(100% - 25px);
-  cursor: pointer;
-}
+// #theme-icon,
+// div#page-extreme-icon {
+//   position: absolute;
+//   left: calc(100% - 25px);
+//   cursor: pointer;
+// }
 #theme-icon {
+  left: -5px;
+  position: relative;
   width: 30px;
-  transform: translateX(calc(-100%));
-  left: calc(100% - 10px);
-  top: 0px;
 }
-div#page-extreme-icon {
-  width: 10px;
-  top: 35px;
-}
+// div#page-extreme-icon {
+//   width: 10px;
+//   top: 35px;
+// }
 .icon--copy {
   position: absolute;
   top: 0px;
@@ -92,17 +91,6 @@ div#page-extreme-icon {
   z-index: -1;
 }
 
-div#slider {
-  width: 25px;
-  height: 100vh;
-  background: #1a1a1a;
-  position: absolute;
-  top: 0px;
-  left: 100%;
-  cursor: pointer;
-  z-index: 0;
-}
-
 .code-block,
 .snippet-block {
   display: flex;
@@ -126,12 +114,16 @@ pre[class*="language-"] {
   display: none;
 }
 
+.icon{
+  user-select: none;
+  cursor: pointer;
+}
+
 div#codeDisplayIcon {
   padding: 5px;
   font-weight: bolder;
   font-size: 1.5em;
   cursor: pointer;
-  position: absolute;
 }
 
 span.output-line-number,
@@ -144,6 +136,15 @@ span.call-line-number {
   line-height: 30px;
   cursor: pointer;
   font-weight: bolder;
+}
+
+svg {
+  width: 20px;
+  height: 20px;
+}
+
+svg#pageExtremeTopIcon {
+  transform: rotate(180deg);
 }
 
 .header--topic {

@@ -162,6 +162,9 @@
       }
     }
   }
+  svg {
+    fill: $light-primary-text-color !important;
+  }
 }
 
 .dark {
@@ -328,5 +331,8 @@
         }
       }
     }
+  }
+  svg {
+    fill: $dark-primary-text-color !important;
   }
 }
