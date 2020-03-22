@@ -281,6 +281,15 @@ span.highlight--high {
   background: rgba($highlight-high, 0.25);
 }
 
+div[class*="highlight-line"]{
+  width: 75%;
+  z-index: 6;
+}
+
+div[class$="line-number"]{
+  z-index: 5;
+}
+
 .code-call-line-number--1 {
   background-color: rgba($global-yellow,0.25);
 }
@@ -289,7 +298,7 @@ span.highlight--high {
 }
 
 .code-error-line-number{
-  background-color: rgba($global-red,0.25);
+  background-color: rgba($global-red,0.35);
 }
 .code-input-line-number {
   background-color: rgba($global-blue,0.25);
