@@ -1,4 +1,5 @@
 @import "./partials/glovars";
+@import "./partials/toc";
 @import "./partials/theme";
 @import "./partials/state";
 @import "./partials/init";
@@ -41,68 +42,7 @@ body#preview {
   margin: 0px;
 }
 
-.TOC {
-  background: #252525;
-  border-radius: 5px;
-  position: absolute;
-  width: 350px;
-  transition: left 250ms ease-in-out;
-  left: 0%;
 
-  .toc--L1 {
-    $base-font-size: 18px;
-
-    width: 100%;
-    user-select: none;
-    padding: 10px 0px 0px 15px;
-    cursor: pointer;
-    font-size: $base-font-size;
-    height: calc(100vh - 75px);
-    overflow: auto;
-
-    .toc-item {
-      transition: background-color 150ms ease-in-out;
-      padding: 3px;
-      border-radius: 2px;
-      &:hover {
-        transition: background-color 150ms ease-in-out;
-      }
-    }
-    span.toc--counter,
-    .toc-toggle {
-      margin-right: 5px;
-    }
-
-    div.toc--L2-item {
-      margin-top: 10px;
-    }
-    div.toc--L3-item,
-    div.toc--L4-item,
-    div.toc--L5-item {
-      margin-top: 5px;
-    }
-
-    .toc--L3 {
-      padding: 0px 20px;
-      font-size: $base-font-size - 2px;
-
-      .toc--L4 {
-        padding: 0px 20px;
-        font-size: $base-font-size - 4px;
-
-        .toc--L5 {
-          padding: 0px 20px;
-          font-size: $base-font-size - 6px;
-
-          .toc--L6 {
-            padding: 0px 20px;
-            font-size: $base-font-size - 8px;
-          }
-        }
-      }
-    }
-  }
-}
 p.image-block {
   display: flex;
   justify-content: center;
@@ -140,24 +80,6 @@ div#page-extreme-icon {
   }
 }
 
-.icon--slider {
-  height: fit-content;
-  width: fit-content;
-  position: absolute;
-  cursor: pointer;
-  font-size: 2em;
-  left: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  user-select: none;
-  transition: left 250ms ease-in-out, transform 250ms ease-in-out;
-  transform: scale(1);
-  &:hover {
-    transform: scale(1.2);
-    transition: left 250ms ease-in-out, transform 250ms ease-in-out;
-  }
-}
-
 .content {
   height: 100vh;
   overflow-y: scroll;
@@ -168,7 +90,6 @@ div#page-extreme-icon {
   left: 350px;
   width: calc(100% - 350px);
   overflow-x: hidden;
-  transition: left 250ms ease-in-out;
   z-index: -1;
 }
 
@@ -195,7 +116,6 @@ div#slider {
 }
 
 pre[class*="language-"] {
-  margin-right: 10px !important;
   flex-grow: 1;
   max-height: 500px;
   margin-top: 0px;
@@ -449,34 +369,4 @@ div.topic-container {
   left: 0%;
 }
 
-div#tocSearchContainer {
-  display: flex;
-  input#tocInputField {
-    width: 75%;
-    position: relative;
-    margin-right: 5px;
-    border: none;
-    outline: none;
-    height: 25px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.2em;
-  }
-  #tocCodeSearch {
-    height: 25px;
-    cursor: pointer;
-    user-select: none;
-    background: rgba($global-red, .75);
-    border-radius: 5px;
-  }
-  #tocToggleCustom {
-    cursor: pointer;
-    user-select: none;
-  }
 
-  & > * {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-  }
-}
