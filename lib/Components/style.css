@@ -20,16 +20,12 @@
   font-weight: bold;
   font-size: 1.2em;
 }
-.TOC div#tocSearchContainer #tocCodeSearch {
+.TOC div#tocSearchContainer #tocCodeSearch, .TOC div#tocSearchContainer #tocToggleCustom {
   height: 25px;
   cursor: pointer;
   user-select: none;
   background: rgba(255, 30, 0, 0.75);
   border-radius: 5px;
-}
-.TOC div#tocSearchContainer #tocToggleCustom {
-  cursor: pointer;
-  user-select: none;
 }
 .TOC div#tocSearchContainer > * {
   flex-grow: 1;
@@ -372,7 +368,7 @@
   transition: left 250ms ease-in-out;
 }
 
-.code-shown {
+.code-shown, .custom-shown {
   background: rgba(3, 202, 63, 0.75) !important;
 }
 
