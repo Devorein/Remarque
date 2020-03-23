@@ -13,6 +13,8 @@
     position: absolute;
     left: calc(100% + 25px);
     top: 0px;
+    width: 30px;
+    padding: 2px;
 
     & > *{
       margin: 3px;
@@ -131,5 +133,26 @@
         }
       }
     }
+  }
+}
+
+#dropzone-right{
+
+  .TOC{
+    padding-left: 20px;
+
+    #tocSearchContainer{
+      margin-left: 20px;
+    }
+
+    #settingsContainer{
+      left: -25px;
+    }
+
+    #tocToggleIcon{
+      transform: rotate(180deg);
+      left: 0px;
+    }
+
   }
 }

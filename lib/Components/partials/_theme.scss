@@ -37,6 +37,9 @@
     #slider{
       background: darken($light-primary-bg-color, 15%);
     }
+    #settingsContainer{
+      background-color: darken($light-primary-bg-color,10%);
+    }
   }
 
   h1,
@@ -206,6 +209,9 @@
 
     #slider{
       background: darken($dark-primary-bg-color, 15%);
+    }
+    #settingsContainer{
+      background-color: darken($dark-primary-bg-color,5%);
     }
   }
 

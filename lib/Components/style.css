@@ -12,6 +12,8 @@
   position: absolute;
   left: calc(100% + 25px);
   top: 0px;
+  width: 30px;
+  padding: 2px;
 }
 .TOC #settingsContainer > * {
   margin: 3px;
@@ -116,6 +118,20 @@
   font-size: 10px;
 }
 
+#dropzone-right .TOC {
+  padding-left: 20px;
+}
+#dropzone-right .TOC #tocSearchContainer {
+  margin-left: 20px;
+}
+#dropzone-right .TOC #settingsContainer {
+  left: -25px;
+}
+#dropzone-right .TOC #tocToggleIcon {
+  transform: rotate(180deg);
+  left: 0px;
+}
+
 .light {
   color: #333;
   background-color: #ccc;
@@ -154,6 +170,9 @@
 }
 .light .TOC #slider {
   background: #a6a6a6;
+}
+.light .TOC #settingsContainer {
+  background-color: #b3b3b3;
 }
 .light h1,
 .light h2,
@@ -294,6 +313,9 @@
 }
 .dark .TOC #slider {
   background: #0d0d0d;
+}
+.dark .TOC #settingsContainer {
+  background-color: #262626;
 }
 .dark h1,
 .dark h2,
