@@ -57,23 +57,6 @@
   cursor: pointer;
   z-index: 0;
 }
-.TOC #tocToggleIcon {
-  height: fit-content;
-  width: fit-content;
-  position: absolute;
-  cursor: pointer;
-  font-size: 2em;
-  left: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  user-select: none;
-  transition: left 250ms ease-in-out, transform 250ms ease-in-out;
-  transform: scale(1);
-}
-.TOC #tocToggleIcon:hover {
-  transform: scale(1.2);
-  transition: left 250ms ease-in-out, transform 250ms ease-in-out;
-}
 .TOC .toc--L1 {
   width: 100%;
   user-select: none;
@@ -124,10 +107,6 @@
   left: -25px;
 }
 #dropzone-right .TOC #slider {
-  left: -25px;
-}
-#dropzone-right .TOC #tocToggleIcon {
-  transform: rotate(180deg);
   left: -25px;
 }
 
