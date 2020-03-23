@@ -20,13 +20,13 @@
 
 @keyframes lowhighlight {
   0% {
-    background: rgba($highlight-low, 0.25);
+    background: rgba($global-green, 0.25);
   }
   50% {
-    background: rgba($highlight-low, 0.15);
+    background: rgba($global-green, 0.15);
   }
   100% {
-    background: rgba($highlight-low, 0.25);
+    background: rgba($global-green, 0.25);
   }
 }
 
@@ -36,13 +36,13 @@
 
 @keyframes mediumhighlight {
   0% {
-    background: rgba($highlight-mid, 0.25);
+    background: rgba($global-yellow, 0.25);
   }
   50% {
-    background: rgba($highlight-mid, 0.15);
+    background: rgba($global-yellow, 0.15);
   }
   100% {
-    background: rgba($highlight-mid, 0.25);
+    background: rgba($global-yellow, 0.25);
   }
 }
 
@@ -52,12 +52,12 @@
 
 @keyframes highhighlight {
   0% {
-    background: rgba($highlight-high, 0.25);
+    background: rgba($global-red, 0.25);
   }
   50% {
-    background: rgba($highlight-high, 0.15);
+    background: rgba($global-red, 0.15);
   }
   100% {
-    background: rgba($highlight-high, 0.25);
+    background: rgba($global-red, 0.25);
   }
 }

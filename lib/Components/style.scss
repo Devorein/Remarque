@@ -172,27 +172,27 @@ span.highlight--high {
 }
 
 .highlight--low {
-  background: rgba($highlight-low, 0.75);
+  background: rgba($global-green, 0.75);
 }
 
 .highlight--medium {
-  background: rgba($highlight-mid, 0.75);
+  background: rgba($global-yellow, 0.75);
 }
 
 .highlight--high {
-  background: rgba($highlight-high, 0.75);
+  background: rgba($global-red, 0.75);
 }
 
 .highlight-line--low {
-  background: rgba($highlight-low, 0.25);
+  background: rgba($global-green, 0.25);
 }
 
 .highlight-line--medium {
-  background: rgba($highlight-mid, 0.25);
+  background: rgba($global-yellow, 0.25);
 }
 
 .highlight-line--high {
-  background: rgba($highlight-high, 0.25);
+  background: rgba($global-red, 0.25);
 }
 
 div[class*="highlight-line"] {
