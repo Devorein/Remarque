@@ -4,7 +4,7 @@
   transition: left 250ms ease-in-out;
 }
 
-.code-shown,.custom-shown{
+.activated{
   background: rgba($global-green,.75) !important;
 }
 

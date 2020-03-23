@@ -21,6 +21,7 @@
 
   div#tocSearchContainer {
     display: flex;
+    height: 30px;
     
     input#tocInputField {
       width: 75%;
@@ -34,12 +35,11 @@
       font-size: 1.2em;
     }
     
-    #tocCodeSearch,#tocToggleCustom  {
+    #tocCodeSearch,#tocToggleCustom,#searchIgnoreCap  {
       height: 25px;
       cursor: pointer;
       user-select: none;
       background: rgba($global-red, .75);
-      border-radius: 5px;
     }
   
     & > * {
@@ -87,7 +87,7 @@
     padding: 10px 0px 0px 15px;
     cursor: pointer;
     font-size: $base-font-size;
-    height: calc(100vh - 75px);
+    height: calc(100vh - 30px);
     overflow: auto;
 
     .toc-item {
