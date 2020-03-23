@@ -41,7 +41,6 @@ body#preview {
   margin: 0px;
 }
 
-
 p.image-block {
   display: flex;
   justify-content: center;
@@ -53,10 +52,11 @@ p.image-block {
   width: 30px;
 }
 
-.icon--copy {
+.icon--copy,
+.icon--download {
   position: absolute;
   top: 0px;
-  left: calc(100% - 30px);
+  width: 10px;
   padding: 5px;
   cursor: pointer;
   z-index: 7;
@@ -64,8 +64,19 @@ p.image-block {
   transition: transform 250ms ease-in-out;
 
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: transform 250ms ease-in-out;
+  }
+}
+
+.icon--copy {
+  left: calc(100% - 30px);
+}
+
+.icon--download {
+  left: 0px;
+  svg {
+    width: 15px;
   }
 }
 
@@ -105,7 +116,7 @@ pre[class*="language-"] {
   display: none;
 }
 
-.icon{
+.icon {
   user-select: none;
   cursor: pointer;
 }
@@ -361,5 +372,3 @@ div.topic-container {
 #dropzone-left {
   left: 0%;
 }
-
-

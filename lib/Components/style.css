@@ -1117,19 +1117,32 @@ p.image-block {
   width: 30px;
 }
 
-.icon--copy {
+.icon--copy,
+.icon--download {
   position: absolute;
   top: 0px;
-  left: calc(100% - 30px);
+  width: 10px;
   padding: 5px;
   cursor: pointer;
   z-index: 7;
   transform: scale(1);
   transition: transform 250ms ease-in-out;
 }
-.icon--copy:hover {
-  transform: scale(1.2);
+.icon--copy:hover,
+.icon--download:hover {
+  transform: scale(1.1);
   transition: transform 250ms ease-in-out;
+}
+
+.icon--copy {
+  left: calc(100% - 30px);
+}
+
+.icon--download {
+  left: 0px;
+}
+.icon--download svg {
+  width: 15px;
 }
 
 .content {
