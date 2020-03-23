@@ -114,6 +114,17 @@
   left: 100%;
 }
 
+#TOC.TOC.limit #tocSearchContainer {
+  display: grid;
+  grid-template: 20px 20px/1fr 1fr 1fr;
+  grid-gap: 5px;
+  height: 50px;
+}
+#TOC.TOC.limit #tocSearchContainer #tocInputField {
+  width: 100%;
+  grid-area: 1/1/2/4;
+}
+
 .light {
   color: #333;
   background-color: #ccc;

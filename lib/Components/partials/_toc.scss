@@ -1,139 +1,153 @@
 @import "./glovars";
 
 .TOC {
-	background: #252525;
-	border-radius: 5px;
-	position: absolute;
-	width: 350px;
-	left: 0%;
+  background: #252525;
+  border-radius: 5px;
+  position: absolute;
+  width: 350px;
+  left: 0%;
 
-	#settingsContainer {
-		display: flex;
-		flex-direction: column;
-		position: absolute;
-		left: calc(100% + 25px);
-		top: 0px;
-		width: 30px;
-		padding: 2px;
+  #settingsContainer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: calc(100% + 25px);
+    top: 0px;
+    width: 30px;
+    padding: 2px;
 
-		& > * {
-			margin: 3px;
-		}
-	}
+    & > * {
+      margin: 3px;
+    }
+  }
 
-	div#tocSearchContainer {
-		display: flex;
-		height: 30px;
+  div#tocSearchContainer {
+    display: flex;
+    height: 30px;
 
-		input#tocInputField {
-			width: 75%;
-			position: relative;
-			margin-right: 5px;
-			border: none;
-			outline: none;
-			height: 25px;
-			text-align: center;
-			font-weight: bold;
-			font-size: 1.2em;
-		}
+    input#tocInputField {
+      width: 75%;
+      position: relative;
+      margin-right: 5px;
+      border: none;
+      outline: none;
+      height: 25px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
 
-		#tocCodeSearch,
-		#tocToggleCustom,
-		#searchIgnoreCap {
-			height: 25px;
-			cursor: pointer;
-			user-select: none;
-			background: rgba($global-red, .75);
-		}
+    #tocCodeSearch,
+    #tocToggleCustom,
+    #searchIgnoreCap {
+      height: 25px;
+      cursor: pointer;
+      user-select: none;
+      background: rgba($global-red, 0.75);
+    }
 
-		& > * {
-			flex-grow: 1;
-			display: flex;
-			justify-content: center;
-			margin-right: 5px;
-		}
-	}
+    & > * {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      margin-right: 5px;
+    }
+  }
 
-	div#slider {
-		width: 25px;
-		height: 100vh;
-		background: #1a1a1a;
-		position: absolute;
-		top: 0px;
-		left: 100%;
-		cursor: pointer;
-		z-index: 0;
-	}
+  div#slider {
+    width: 25px;
+    height: 100vh;
+    background: #1a1a1a;
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    cursor: pointer;
+    z-index: 0;
+  }
 
-	.toc--L1 {
-		$base-font-size: 18px;
+  .toc--L1 {
+    $base-font-size: 18px;
 
-		width: 100%;
-		user-select: none;
-		padding: 10px 0px 0px 15px;
-		cursor: pointer;
-		font-size: $base-font-size;
-		height: calc(100vh - 30px);
-		overflow: auto;
+    width: 100%;
+    user-select: none;
+    padding: 10px 0px 0px 15px;
+    cursor: pointer;
+    font-size: $base-font-size;
+    height: calc(100vh - 30px);
+    overflow: auto;
 
-		.toc-item {
-			transition: background-color 150ms ease-in-out;
-			padding: 3px;
-			border-radius: 2px;
-			&:hover {
-				transition: background-color 150ms ease-in-out;
-			}
-		}
-		span.toc--counter,
-		.toc-toggle {
-			margin-right: 5px;
-		}
+    .toc-item {
+      transition: background-color 150ms ease-in-out;
+      padding: 3px;
+      border-radius: 2px;
+      &:hover {
+        transition: background-color 150ms ease-in-out;
+      }
+    }
+    span.toc--counter,
+    .toc-toggle {
+      margin-right: 5px;
+    }
 
-		div.toc--L2-item {
-			margin-top: 10px;
-		}
-		div.toc--L3-item,
-		div.toc--L4-item,
-		div.toc--L5-item {
-			margin-top: 5px;
-		}
+    div.toc--L2-item {
+      margin-top: 10px;
+    }
+    div.toc--L3-item,
+    div.toc--L4-item,
+    div.toc--L5-item {
+      margin-top: 5px;
+    }
 
-		.toc--L3 {
-			padding: 0px 20px;
-			font-size: $base-font-size - 2px;
+    .toc--L3 {
+      padding: 0px 20px;
+      font-size: $base-font-size - 2px;
 
-			.toc--L4 {
-				padding: 0px 20px;
-				font-size: $base-font-size - 4px;
+      .toc--L4 {
+        padding: 0px 20px;
+        font-size: $base-font-size - 4px;
 
-				.toc--L5 {
-					padding: 0px 20px;
-					font-size: $base-font-size - 6px;
+        .toc--L5 {
+          padding: 0px 20px;
+          font-size: $base-font-size - 6px;
 
-					.toc--L6 {
-						padding: 0px 20px;
-						font-size: $base-font-size - 8px;
-					}
-				}
-			}
-		}
-	}
+          .toc--L6 {
+            padding: 0px 20px;
+            font-size: $base-font-size - 8px;
+          }
+        }
+      }
+    }
+  }
 }
 
 #dropzone-right {
-	.TOC {
-		#settingsContainer {
-			left: -25px;
-		}
+  .TOC {
+    #settingsContainer {
+      left: -25px;
+    }
 
-		#slider {
-			left: -25px;
-		}
-	}
+    #slider {
+      left: -25px;
+    }
+  }
 }
 
 #dropzone-left {
-	#slider {
-		left: 100%;
-	}
+  #slider {
+    left: 100%;
+  }
+}
+
+#TOC.TOC.limit {
+  #tocSearchContainer {
+    display: grid;
+    grid-template: 20px 20px/ 1fr 1fr 1fr;
+    grid-gap: 5px;
+    height: 50px;
+
+    #tocInputField {
+      width: 100%;
+      grid-area: 1/1/2/4;
+    }
+  }
 }
