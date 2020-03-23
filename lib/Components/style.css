@@ -33,7 +33,9 @@
   font-weight: bold;
   font-size: 1.2em;
 }
-.TOC div#tocSearchContainer #tocCodeSearch, .TOC div#tocSearchContainer #tocToggleCustom, .TOC div#tocSearchContainer #searchIgnoreCap {
+.TOC div#tocSearchContainer #tocCodeSearch,
+.TOC div#tocSearchContainer #tocToggleCustom,
+.TOC div#tocSearchContainer #searchIgnoreCap {
   height: 25px;
   cursor: pointer;
   user-select: none;
@@ -118,18 +120,19 @@
   font-size: 10px;
 }
 
-#dropzone-right .TOC {
-  padding-left: 20px;
-}
-#dropzone-right .TOC #tocSearchContainer {
-  margin-left: 20px;
-}
 #dropzone-right .TOC #settingsContainer {
+  left: -25px;
+}
+#dropzone-right .TOC #slider {
   left: -25px;
 }
 #dropzone-right .TOC #tocToggleIcon {
   transform: rotate(180deg);
-  left: 0px;
+  left: -25px;
+}
+
+#dropzone-left #slider {
+  left: 100%;
 }
 
 .light {
