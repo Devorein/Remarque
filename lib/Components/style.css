@@ -1149,7 +1149,6 @@ p.image-block {
   height: 100vh;
   overflow-y: scroll;
   padding: 10px;
-  padding-left: 30px;
   display: inline-block;
   position: absolute;
   left: 350px;
