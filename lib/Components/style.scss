@@ -253,7 +253,16 @@ pre.output-block {
   overflow-x: auto;
   flex: 35%;
 }
-
+p.text-block {
+  .low--text,
+  .medium--text,
+  .high--text {
+    border-radius: 2px;
+    padding: 3px;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+  }
+}
 li > ul {
   opacity: 1;
   transition: opacity 1000ms ease-in-out, max-height 1000ms ease-in-out;

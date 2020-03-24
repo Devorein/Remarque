@@ -1,4 +1,5 @@
 @import "./glovars";
+
 .slide-left {
   left: -100% !important;
   transition: left 250ms ease-in-out;
@@ -15,6 +16,18 @@
 
 .hidden {
   display: none;
+}
+
+.low--text {
+  background-color: rgba($global-green, 0.35);
+}
+
+.medium--text {
+  background-color: rgba($global-yellow, 0.35);
+}
+
+.high--text {
+  background-color: rgba($global-red, 0.35);
 }
 
 span.icon--toggle {

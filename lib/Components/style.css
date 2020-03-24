@@ -429,6 +429,18 @@
   display: none;
 }
 
+.low--text {
+  background-color: rgba(3, 202, 63, 0.35);
+}
+
+.medium--text {
+  background-color: rgba(247, 243, 20, 0.35);
+}
+
+.high--text {
+  background-color: rgba(255, 30, 0, 0.35);
+}
+
 span.icon--toggle {
   margin-right: 5px;
   cursor: pointer;
@@ -1319,6 +1331,15 @@ pre.output-block {
   width: 100%;
   overflow-x: auto;
   flex: 35%;
+}
+
+p.text-block .low--text,
+p.text-block .medium--text,
+p.text-block .high--text {
+  border-radius: 2px;
+  padding: 3px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
 }
 
 li > ul {
