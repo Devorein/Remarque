@@ -355,6 +355,6 @@
     }
   }
   svg {
-    fill: $dark-primary-text-color !important;
+    fill: lighten($dark-primary-text-color, 10%) !important;
   }
 }

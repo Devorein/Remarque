@@ -429,7 +429,7 @@
   background: #1a1a1a;
 }
 .dark svg {
-  fill: #d0d6e2 !important;
+  fill: #f0f2f5 !important;
 }
 
 .slide-left {
@@ -1479,6 +1479,10 @@ div#progress #progressCounter {
   font-weight: bolder;
   user-select: none;
   cursor: pointer;
+}
+
+svg {
+  padding: 3px;
 }
 
 /*# sourceMappingURL=style.css.map */
