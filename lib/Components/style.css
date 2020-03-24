@@ -273,6 +273,9 @@
 .light .topic-container .subtopic-container .subtopicL2-container .subtopicL3-container .subtopicL3-header {
   background: #b3b3b3;
 }
+.light #clock {
+  background: #d9d9d9;
+}
 .light #progress #progressCounter {
   background: #d9d9d9;
 }
@@ -321,6 +324,9 @@
 }
 .dark .TOC #settingsContainer {
   background-color: #262626;
+}
+.dark #clock {
+  background-color: #1a1a1a;
 }
 .dark #progress #progressCounter {
   background-color: #0d0d0d;
@@ -1439,6 +1445,16 @@ div.topic-container .subtopic-container .subtopicL2-container .subtopicL3-contai
 
 #dropzone-left {
   left: 0%;
+}
+
+#clock {
+  font-size: 10px;
+  position: absolute;
+  left: 30px;
+  z-index: 8;
+  padding: 5px;
+  width: 50px;
+  border-radius: 5px;
 }
 
 div#progress {

@@ -381,6 +381,16 @@ div.topic-container {
   left: 0%;
 }
 
+#clock {
+  font-size: 10px;
+  position: absolute;
+  left: 30px;
+  z-index: 8;
+  padding: 5px;
+  width: 50px;
+  border-radius: 5px;
+}
+
 div#progress {
   width: calc(100% - 50px);
   height: 10px;

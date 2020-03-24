@@ -165,6 +165,9 @@
       }
     }
   }
+  #clock {
+    background: lighten($light-primary-bg-color, 5%);
+  }
   #progress {
     #progressCounter {
       background: lighten($light-primary-bg-color, 5%);
@@ -218,6 +221,9 @@
     #settingsContainer {
       background-color: darken($dark-primary-bg-color, 5%);
     }
+  }
+  #clock {
+    background-color: darken($dark-primary-bg-color, 10%);
   }
   #progress {
     #progressCounter {
