@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  left: calc(100% + 25px);
+  left: 100%;
   top: 0px;
   width: 30px;
   padding: 2px;
@@ -22,6 +22,12 @@
   display: flex;
   height: 30px;
 }
+.TOC div#tocSearchContainer #tocItemStatus #tocHiddenItems {
+  color: rgba(255, 30, 0, 0.75);
+}
+.TOC div#tocSearchContainer #tocItemStatus > * {
+  font-size: 20px;
+}
 .TOC div#tocSearchContainer input#tocInputField {
   width: 75%;
   position: relative;
@@ -32,6 +38,9 @@
   text-align: center;
   font-weight: bold;
   font-size: 1.2em;
+}
+.TOC div#tocSearchContainer #tocCodeSearch {
+  min-width: 20px;
 }
 .TOC div#tocSearchContainer #tocCodeSearch,
 .TOC div#tocSearchContainer #tocToggleCustom,
@@ -48,7 +57,7 @@
   margin-right: 5px;
 }
 .TOC div#slider {
-  width: 25px;
+  width: 30px;
   height: 100vh;
   background: #1a1a1a;
   position: absolute;
@@ -104,10 +113,10 @@
 }
 
 #dropzone-right .TOC #settingsContainer {
-  left: -25px;
+  left: -30px;
 }
 #dropzone-right .TOC #slider {
-  left: -25px;
+  left: -30px;
 }
 
 #dropzone-left #slider {
@@ -116,13 +125,13 @@
 
 #TOC.TOC.limit #tocSearchContainer {
   display: grid;
-  grid-template: 20px 20px/1fr 1fr 1fr;
+  grid-template: 20px 20px/1fr 1fr 1fr 1fr;
   grid-gap: 5px;
   height: 50px;
 }
 #TOC.TOC.limit #tocSearchContainer #tocInputField {
   width: 100%;
-  grid-area: 1/1/2/4;
+  grid-area: 1/1/2/5;
 }
 
 .light {
