@@ -5,7 +5,7 @@
   .TOC {
     background: darken($light-primary-bg-color, 5%);
 
-    input#tocInputField{
+    input#tocInputField {
       background-color: darken($light-primary-bg-color, 15%);
       color: $light-primary-text-color;
     }
@@ -34,11 +34,11 @@
         background: darken($light-primary-bg-color, 5%);
       }
     }
-    #slider{
+    #slider {
       background: darken($light-primary-bg-color, 15%);
     }
-    #settingsContainer{
-      background-color: darken($light-primary-bg-color,10%);
+    #settingsContainer {
+      background-color: darken($light-primary-bg-color, 10%);
     }
   }
 
@@ -165,6 +165,11 @@
       }
     }
   }
+  #progress {
+    #progressCounter {
+      background: lighten($light-primary-bg-color, 5%);
+    }
+  }
   svg {
     fill: $light-primary-text-color !important;
   }
@@ -176,7 +181,7 @@
 
   .TOC {
     background: darken($dark-primary-bg-color, 5%);
-    input#tocInputField{
+    input#tocInputField {
       background-color: darken($dark-primary-bg-color, 15%);
       color: $dark-primary-text-color;
     }
@@ -207,11 +212,16 @@
       }
     }
 
-    #slider{
+    #slider {
       background: darken($dark-primary-bg-color, 15%);
     }
-    #settingsContainer{
-      background-color: darken($dark-primary-bg-color,5%);
+    #settingsContainer {
+      background-color: darken($dark-primary-bg-color, 5%);
+    }
+  }
+  #progress {
+    #progressCounter {
+      background-color: darken($dark-primary-bg-color, 15%);
     }
   }
 

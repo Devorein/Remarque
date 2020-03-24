@@ -273,6 +273,9 @@
 .light .topic-container .subtopic-container .subtopicL2-container .subtopicL3-container .subtopicL3-header {
   background: #b3b3b3;
 }
+.light #progress #progressCounter {
+  background: #d9d9d9;
+}
 .light svg {
   fill: #333 !important;
 }
@@ -318,6 +321,9 @@
 }
 .dark .TOC #settingsContainer {
   background-color: #262626;
+}
+.dark #progress #progressCounter {
+  background-color: #0d0d0d;
 }
 .dark h1,
 .dark h2,
@@ -1433,6 +1439,30 @@ div.topic-container .subtopic-container .subtopicL2-container .subtopicL3-contai
 
 #dropzone-left {
   left: 0%;
+}
+
+div#progress {
+  width: calc(100% - 50px);
+  height: 10px;
+  display: flex;
+  z-index: 8;
+  position: absolute;
+  top: 10px;
+  left: 25px;
+}
+div#progress #progressBar {
+  width: calc(100% - 50px);
+}
+div#progress #progressCounter {
+  font-size: 10px;
+  width: 50px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  user-select: none;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
