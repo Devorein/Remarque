@@ -63,9 +63,10 @@ samp {
 html {
   font-size: 0.875em;
 }
+
 html,
 body {
-  font-family: "Fira Sans";
+  font-family: Fira Sans;
   height: 100%;
 }
 
@@ -114,7 +115,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Overpass, "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-feature-settings: "dlig" 1, "liga" 1, "lnum" 1, "kern" 1;
   font-style: normal;
   font-weight: 600;
