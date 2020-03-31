@@ -68,7 +68,7 @@
 .TOC .toc--L1-item-container {
   width: 100%;
   user-select: none;
-  padding: 10px 0px 0px 15px;
+  padding: 30px;
   cursor: pointer;
   font-size: 18px;
   height: calc(100vh - 30px);
@@ -1450,8 +1450,6 @@ h1.block-header {
 }
 
 div#content {
-  width: 100vw;
-  left: 370px;
   position: absolute;
   height: 100vh;
   overflow: auto;
