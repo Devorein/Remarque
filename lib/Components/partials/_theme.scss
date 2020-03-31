@@ -111,7 +111,7 @@
   h1.block-header {
     background-color: darken($light-primary-bg-color, 15%);
   }
-  #overlay .text-block {
+  #overlay .cloned-block {
     background-color: lighten($light-primary-bg-color, 5%);
   }
   ul.TOC--L1 > li {
@@ -175,6 +175,42 @@
   }
   svg {
     fill: $light-primary-text-color !important;
+  }
+  .code-container {
+    .file-group {
+      background-color: $light-primary-bg-color;
+      .file-block {
+        .file-item {
+          &--folder {
+            background-color: darken($light-primary-bg-color, 5%);
+          }
+          &-children {
+            & .file-name {
+              &:hover {
+                background-color: darken($light-primary-bg-color, 10%);
+              }
+            }
+          }
+        }
+      }
+    }
+    .code-group {
+      .linenumber-container {
+        background-color: #ebebeb;
+      }
+    }
+    .explanation-group {
+      background-color: $light-primary-bg-color;
+    }
+  }
+  #overlay {
+    div#overlayNextIcon,
+    div#overlayPrevIcon {
+      color: darken($light-primary-bg-color, 5%);
+    }
+    #overlayCounter {
+      background-color: darken($light-primary-bg-color, 5%);
+    }
   }
 }
 
@@ -300,7 +336,7 @@
   h1.block-header {
     background-color: darken($dark-primary-bg-color, 15%);
   }
-  #overlay .text-block {
+  #overlay .cloned-block {
     background-color: lighten($dark-primary-bg-color, 5%);
   }
   ul.TOC--L1 > li {
@@ -356,5 +392,42 @@
   }
   svg {
     fill: lighten($dark-primary-text-color, 10%) !important;
+  }
+
+  .code-container {
+    .file-group {
+      background-color: $dark-primary-bg-color;
+      .file-block {
+        .file-item {
+          &--folder {
+            background-color: darken($dark-primary-bg-color, 5%);
+          }
+          &-children {
+            & .file-name {
+              &:hover {
+                background-color: darken($dark-primary-bg-color, 10%);
+              }
+            }
+          }
+        }
+      }
+    }
+    .code-group {
+      .linenumber-container {
+        background-color: #1c1c1c;
+      }
+    }
+    .explanation-group {
+      background-color: $dark-primary-bg-color;
+    }
+  }
+  #overlay {
+    div#overlayNextIcon,
+    div#overlayPrevIcon {
+      color: darken($dark-primary-bg-color, 5%);
+    }
+    #overlayCounter {
+      background-color: darken($dark-primary-bg-color, 5%);
+    }
   }
 }

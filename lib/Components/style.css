@@ -1,9 +1,8 @@
-@charset "UTF-8";
 .TOC {
   background: #252525;
   border-radius: 5px;
   position: absolute;
-  width: 350px;
+  width: 100%;
   left: 0%;
 }
 .TOC #settingsContainer {
@@ -66,7 +65,7 @@
   cursor: pointer;
   z-index: 0;
 }
-.TOC .toc--L1 {
+.TOC .toc--L1-item-container {
   width: 100%;
   user-select: none;
   padding: 10px 0px 0px 15px;
@@ -75,39 +74,43 @@
   height: calc(100vh - 30px);
   overflow: auto;
 }
-.TOC .toc--L1 .toc-item {
+.TOC .toc--L1-item-container .toc-item {
   transition: background-color 150ms ease-in-out;
   padding: 3px;
   border-radius: 2px;
+  display: flex;
 }
-.TOC .toc--L1 .toc-item:hover {
+.TOC .toc--L1-item-container .toc-item:hover {
   transition: background-color 150ms ease-in-out;
 }
-.TOC .toc--L1 span.toc--counter,
-.TOC .toc--L1 .toc-toggle {
+.TOC .toc--L1-item-container span.toc--counter,
+.TOC .toc--L1-item-container .toc-toggle {
   margin-right: 5px;
 }
-.TOC .toc--L1 div.toc--L2-item {
+.TOC .toc--L1-item-container div.toc--L2-item {
   margin-top: 10px;
 }
-.TOC .toc--L1 div.toc--L3-item,
-.TOC .toc--L1 div.toc--L4-item,
-.TOC .toc--L1 div.toc--L5-item {
+.TOC .toc--L1-item-container div.toc--L3-item,
+.TOC .toc--L1-item-container div.toc--L4-item,
+.TOC .toc--L1-item-container div.toc--L5-item {
   margin-top: 5px;
 }
-.TOC .toc--L1 .toc--L3 {
+.TOC .toc--L1-item-container div.toc--L2-item-container {
+  padding: 0px 20px;
+}
+.TOC .toc--L1-item-container .toc--L3-item-container {
   padding: 0px 20px;
   font-size: 16px;
 }
-.TOC .toc--L1 .toc--L3 .toc--L4 {
+.TOC .toc--L1-item-container .toc--L4-item-container {
   padding: 0px 20px;
   font-size: 14px;
 }
-.TOC .toc--L1 .toc--L3 .toc--L4 .toc--L5 {
+.TOC .toc--L1-item-container .toc--L5-item-container {
   padding: 0px 20px;
   font-size: 12px;
 }
-.TOC .toc--L1 .toc--L3 .toc--L4 .toc--L5 .toc--L6 {
+.TOC .toc--L1-item-container .toc--L6-item-container {
   padding: 0px 20px;
   font-size: 10px;
 }
@@ -129,9 +132,23 @@
   grid-gap: 5px;
   height: 50px;
 }
-#TOC.TOC.limit #tocSearchContainer #tocInputField {
+#TOC.TOC.limit #tocSearchContainer > * {
   width: 100%;
+}
+#TOC.TOC.limit #tocSearchContainer #tocInputField {
   grid-area: 1/1/2/5;
+}
+#TOC.TOC.limit #tocSearchContainer #tocItemStatus {
+  grid-area: 2/1/3/2;
+}
+#TOC.TOC.limit #tocSearchContainer #tocCodeSearch {
+  grid-area: 2/2/3/3;
+}
+#TOC.TOC.limit #tocSearchContainer #tocToggleCustom {
+  grid-area: 2/3/3/4;
+}
+#TOC.TOC.limit #tocSearchContainer #searchIgnoreCap {
+  grid-area: 2/4/3/5;
 }
 
 .light {
@@ -234,7 +251,7 @@
 .light h1.block-header {
   background-color: #a6a6a6;
 }
-.light #overlay .text-block {
+.light #overlay .cloned-block {
   background-color: #d9d9d9;
 }
 .light ul.TOC--L1 > li > span.TOC-link:hover {
@@ -281,6 +298,28 @@
 }
 .light svg {
   fill: #333 !important;
+}
+.light .code-container .file-group {
+  background-color: #ccc;
+}
+.light .code-container .file-group .file-block .file-item--folder {
+  background-color: #bfbfbf;
+}
+.light .code-container .file-group .file-block .file-item-children .file-name:hover {
+  background-color: #b3b3b3;
+}
+.light .code-container .code-group .linenumber-container {
+  background-color: #ebebeb;
+}
+.light .code-container .explanation-group {
+  background-color: #ccc;
+}
+.light #overlay div#overlayNextIcon,
+.light #overlay div#overlayPrevIcon {
+  color: #bfbfbf;
+}
+.light #overlay #overlayCounter {
+  background-color: #bfbfbf;
 }
 
 .dark {
@@ -389,7 +428,7 @@
 .dark h1.block-header {
   background-color: #0d0d0d;
 }
-.dark #overlay .text-block {
+.dark #overlay .cloned-block {
   background-color: #404040;
 }
 .dark ul.TOC--L1 > li > span.TOC-link:hover {
@@ -431,6 +470,28 @@
 .dark svg {
   fill: #f0f2f5 !important;
 }
+.dark .code-container .file-group {
+  background-color: #333;
+}
+.dark .code-container .file-group .file-block .file-item--folder {
+  background-color: #262626;
+}
+.dark .code-container .file-group .file-block .file-item-children .file-name:hover {
+  background-color: #1a1a1a;
+}
+.dark .code-container .code-group .linenumber-container {
+  background-color: #1c1c1c;
+}
+.dark .code-container .explanation-group {
+  background-color: #333;
+}
+.dark #overlay div#overlayNextIcon,
+.dark #overlay div#overlayPrevIcon {
+  color: #262626;
+}
+.dark #overlay #overlayCounter {
+  background-color: #262626;
+}
 
 .slide-left {
   left: -100% !important;
@@ -448,6 +509,10 @@
 
 .hidden {
   display: none;
+}
+
+.selected {
+  background: #222;
 }
 
 .low--text {
@@ -472,6 +537,13 @@ span.icon--toggle {
 .current-link {
   border-radius: 3px;
   padding: 5px;
+}
+
+.fs--toggle {
+  grid-template: 250px 250px/20px 1fr 1fr 1fr 1fr !important;
+}
+.fs--toggle .file-group .file-block {
+  display: none;
 }
 
 pre {
@@ -603,6 +675,7 @@ h6 {
   font-style: normal;
   font-weight: 600;
   margin-top: 0;
+  text-align: center;
 }
 
 h1 {
@@ -761,7 +834,8 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=clike+java&plu
   hyphens: none;
 }
 .light :not(pre) > code[class*=language-],
-.light pre[class*=language-] {
+.light pre[class*=language-],
+.light .output-block {
   background: #ebebeb;
 }
 .light code[class*=language-]::-moz-selection,
@@ -784,10 +858,10 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=clike+java&plu
   padding: 0.1em;
 }
 .light pre[class*=language-] {
-  overflow: auto;
   position: relative;
   margin: 0.5em 0;
   padding: 1.25em 1em;
+  padding-left: 20px;
 }
 .light .language-css > code,
 .light .language-sass > code,
@@ -932,13 +1006,15 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=clike+java&plu
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+  margin-left: 20px;
 }
 .dark pre[class*=language-] {
   padding: 1em;
-  overflow: auto;
+  overflow: hidden;
 }
 .dark :not(pre) > code[class*=language-],
-.dark pre[class*=language-] {
+.dark pre[class*=language-],
+.dark .output-block {
   background: #1c1c1c;
 }
 .dark :not(pre) > code[class*=language-] {
@@ -1014,95 +1090,6 @@ pre[data-line] {
   padding: 1em 0 1em 3em;
 }
 
-.line-highlight {
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding: inherit 0;
-  margin-top: 1em;
-  /* Same as .prism’s padding-top */
-  background: rgba(153, 122, 102, 0.08);
-  background: linear-gradient(to right, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
-  pointer-events: none;
-  line-height: inherit;
-  white-space: pre;
-}
-
-.line-highlight:before,
-.line-highlight[data-end]:after {
-  content: attr(data-start);
-  position: absolute;
-  top: 0.4em;
-  left: 0.6em;
-  min-width: 1em;
-  padding: 0 0.5em;
-  background-color: rgba(153, 122, 102, 0.4);
-  color: #f5f2f0;
-  font: bold 65%/1.5 sans-serif;
-  text-align: center;
-  vertical-align: 0.3em;
-  border-radius: 999px;
-  text-shadow: none;
-  box-shadow: 0 1px white;
-}
-
-.line-highlight[data-end]:after {
-  content: attr(data-end);
-  top: auto;
-  bottom: 0.4em;
-}
-
-.line-numbers .line-highlight:before,
-.line-numbers .line-highlight:after {
-  content: none;
-}
-
-pre[class*=language-].line-numbers {
-  position: relative;
-  counter-reset: linenumber;
-  overflow: hidden;
-  margin-right: 5px;
-}
-
-pre[class*=language-].line-numbers > code {
-  position: relative;
-  white-space: inherit;
-  z-index: 7;
-  display: inherit;
-  padding-left: 3.8em;
-  overflow: auto;
-  height: 500px;
-}
-
-.line-numbers .line-numbers-rows {
-  position: absolute;
-  pointer-events: none;
-  top: 0px;
-  font-size: 100%;
-  left: 0px;
-  width: 3em;
-  /* works for line-numbers below 1000 lines */
-  letter-spacing: -1px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.line-numbers-rows > span {
-  pointer-events: none;
-  display: block;
-  counter-increment: linenumber;
-}
-
-.line-numbers-rows > span:before {
-  content: counter(linenumber);
-  color: #999;
-  display: block;
-  padding-right: 0.8em;
-  text-align: right;
-}
-
 #overlay {
   position: fixed;
   display: none;
@@ -1113,7 +1100,7 @@ pre[class*=language-].line-numbers > code {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.72);
-  z-index: 2;
+  z-index: 10;
   cursor: pointer;
 }
 
@@ -1134,7 +1121,7 @@ body#preview {
   font-weight: 400;
   line-height: 2rem;
   width: 100vw;
-  height: fit-content;
+  height: 100vh;
   overflow: hidden;
   margin: 0px;
 }
@@ -1173,6 +1160,7 @@ p.image-block {
 
 .icon--download {
   left: 0px;
+  z-index: 8;
 }
 .icon--download svg {
   width: 15px;
@@ -1190,14 +1178,10 @@ p.image-block {
   z-index: -1;
 }
 
-.code-block,
 .snippet-block {
   display: flex;
   position: relative;
   width: 100%;
-}
-
-.snippet-block {
   min-width: 500px;
   width: 50%;
   max-width: 750px;
@@ -1207,6 +1191,7 @@ pre[class*=language-] {
   flex-grow: 1;
   max-height: 500px;
   margin-top: 0px;
+  background-color: red;
 }
 
 .hide {
@@ -1216,6 +1201,11 @@ pre[class*=language-] {
 .icon {
   user-select: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
 }
 
 div#codeDisplayIcon {
@@ -1223,18 +1213,6 @@ div#codeDisplayIcon {
   font-weight: bolder;
   font-size: 1.5em;
   cursor: pointer;
-}
-
-span.output-line-number,
-span.input-line-number,
-span.error-line-number,
-span.call-line-number {
-  padding: 3px;
-  border-radius: 2px;
-  margin-right: 5px;
-  line-height: 30px;
-  cursor: pointer;
-  font-weight: bolder;
 }
 
 svg {
@@ -1262,68 +1240,6 @@ svg#pageExtremeTopIcon {
   font-size: 1.25em;
   padding: 5px;
   margin-bottom: 5px;
-}
-
-span.highlight--low,
-span.highlight--medium,
-span.highlight--high {
-  color: black;
-  border-radius: 3px;
-  font-size: 16px;
-  min-width: 30px;
-  text-align: center;
-  cursor: pointer;
-  padding: 3px;
-  margin-right: 5px;
-}
-
-.highlight--low {
-  background: rgba(3, 202, 63, 0.75);
-}
-
-.highlight--medium {
-  background: rgba(247, 243, 20, 0.75);
-}
-
-.highlight--high {
-  background: rgba(255, 30, 0, 0.75);
-}
-
-.highlight-line--low {
-  background: rgba(3, 202, 63, 0.25);
-}
-
-.highlight-line--medium {
-  background: rgba(247, 243, 20, 0.25);
-}
-
-.highlight-line--high {
-  background: rgba(255, 30, 0, 0.25);
-}
-
-div[class*=highlight-line] {
-  width: 75%;
-  z-index: 6;
-}
-
-div[class$=line-number] {
-  z-index: 5;
-}
-
-.code-call-line-number--1 {
-  background-color: rgba(247, 243, 20, 0.25);
-}
-
-.code-call-line-number--2 {
-  background-color: rgba(245, 154, 19, 0.25);
-}
-
-.code-error-line-number {
-  background-color: rgba(255, 30, 0, 0.35);
-}
-
-.code-input-line-number {
-  background-color: rgba(26, 112, 240, 0.25);
 }
 
 .explanation-lines li {
@@ -1387,7 +1303,13 @@ h1.block-header {
   user-select: none;
 }
 
-#overlay .text-block {
+#overlay #overlayCancelIcon {
+  position: absolute;
+  left: 100%;
+  z-index: 5;
+  transform: translateX(-100%);
+}
+#overlay .cloned-block {
   position: absolute;
   top: 50%;
   font-size: 2em;
@@ -1399,6 +1321,33 @@ h1.block-header {
   line-height: 40px;
   text-align: center;
 }
+#overlay div#overlayNextIcon {
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-100%, -50%);
+  padding: 5px;
+  font-size: 2em;
+}
+#overlay div#overlayPrevIcon {
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px;
+  font-size: 2em;
+}
+#overlay div#overlayCounter {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  border-radius: 5px;
+  width: 100px;
+  text-align: center;
+  font-weight: bolder;
+}
 
 #overlay img {
   width: 100%;
@@ -1408,11 +1357,100 @@ h1.block-header {
   transform: translate(-50%, -50%);
 }
 
-ul.TOC--L1 > li > span.TOC-link,
-ul.TOC--L2 > li > span.TOC-link,
-ul.TOC--L3 > li > span.TOC-link {
-  padding: 5px;
-  transition: background-color 250ms ease-in-out, padding 250ms ease-in-out;
+.highlight-line {
+  position: absolute;
+  height: 17px;
+  z-index: 7;
+  width: 100%;
+  left: 30px;
+}
+.highlight-line--error {
+  background-color: rgba(255, 30, 0, 0.25);
+}
+.highlight-line--output {
+  background-color: rgba(88, 88, 88, 0.25);
+}
+.highlight-line--input {
+  background-color: rgba(26, 112, 240, 0.25);
+}
+.highlight-line--low {
+  width: 75%;
+  background: rgba(3, 202, 63, 0.25);
+}
+.highlight-line--medium {
+  width: 75%;
+  background: rgba(247, 243, 20, 0.25);
+}
+.highlight-line--high {
+  width: 75%;
+  background: rgba(255, 30, 0, 0.25);
+}
+.highlight-line--function--1 {
+  background: rgba(247, 243, 20, 0.25);
+}
+.highlight-line--function--2 {
+  background: rgba(245, 154, 19, 0.25);
+}
+.highlight-line--function--3 {
+  background: rgba(247, 243, 20, 0.25);
+}
+.highlight-number {
+  border-radius: 3px;
+  font-size: 16px;
+  min-width: 30px;
+  text-align: center;
+  cursor: pointer;
+  padding: 3px;
+  margin-right: 5px;
+}
+.highlight-number--error {
+  background-color: rgba(255, 30, 0, 0.5);
+}
+.highlight-number--output {
+  background-color: rgba(88, 88, 88, 0.5);
+}
+.highlight-number--input {
+  background-color: rgba(26, 112, 240, 0.5);
+}
+.highlight-number--low {
+  background: rgba(3, 202, 63, 0.5);
+}
+.highlight-number--medium {
+  background: rgba(247, 243, 20, 0.5);
+}
+.highlight-number--high {
+  background: rgba(255, 30, 0, 0.5);
+}
+.highlight-number--function--1 {
+  background: rgba(234, 230, 8, 0.5);
+}
+.highlight-number--function--2 {
+  background: rgba(229, 141, 10, 0.5);
+}
+.highlight-number--function--3 {
+  background: rgba(184, 181, 6, 0.5);
+}
+
+div#content {
+  width: 100vw;
+  left: 370px;
+  position: absolute;
+  height: 100vh;
+  overflow: auto;
+}
+
+.linenumber-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 7px;
+  line-height: 21px;
+  left: 0px;
+  padding: 10px;
+  z-index: 8;
+}
+.linenumber-container > span {
+  opacity: 0.5;
 }
 
 .block-header {
@@ -1455,6 +1493,110 @@ div.topic-container .subtopic-container .subtopicL2-container .subtopicL3-contai
   padding: 5px;
   width: 50px;
   border-radius: 5px;
+}
+
+.code-container {
+  display: grid;
+  height: 500px;
+  grid-template: 250px 250px/1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+  position: relative;
+}
+.code-container .file-group {
+  grid-area: 1/1/3/2;
+  padding: 10px;
+  padding-left: 15px;
+  cursor: pointer;
+  position: relative;
+  overflow: auto;
+}
+.code-container .file-group .file-toggle {
+  position: absolute;
+  left: calc(100% - 10px);
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.code-container .file-group > .file-block {
+  margin: 5px;
+  width: 95%;
+}
+.code-container .file-group .file-block.file-dir {
+  margin: 5px;
+}
+.code-container .file-group .file-block .file-item--file {
+  display: flex;
+  padding: 2px 5px;
+}
+.code-container .file-group .file-block .file-item-children {
+  padding-left: 10px;
+  margin-top: 5px;
+}
+.code-container .file-group .file-block .file-item-children .file-name {
+  transition: background-color 250ms ease-in-out;
+}
+.code-container .file-group .file-block .file-item-children .file-name:hover {
+  transition: background-color 250ms ease-in-out;
+}
+.code-container .file-group .file-block .file-item--toggle {
+  position: absolute;
+  left: calc(100% - 20px);
+}
+.code-container .file-group .file-block .file-item--folder {
+  display: flex;
+  border-radius: 5px;
+  position: relative;
+  width: 125px;
+  user-select: none;
+}
+.code-container .file-group .file-block .file-item--folder--icon {
+  display: flex;
+}
+.code-container .file-group .file-block .file-item--icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -2px;
+}
+.code-container .file-group .file-block .file-item--icon svg {
+  fill: black !important;
+}
+.code-container .code-group {
+  grid-area: 1/2/3/4;
+  overflow: hidden;
+  position: relative;
+  margin-top: 0px;
+}
+.code-container .code-group .code-block {
+  position: absolute;
+  height: 100%;
+  margin: 0px;
+  width: 100%;
+  padding-right: 0px;
+  overflow: auto;
+}
+.code-container .code-group .code-block .code-item {
+  height: 100%;
+}
+.code-container .output-group {
+  grid-area: 1/4/2/6;
+  overflow: hidden;
+  margin-top: 0px;
+  position: relative;
+}
+.code-container .output-group .output-block {
+  position: absolute;
+  height: 100%;
+}
+.code-container .explanation-group {
+  grid-area: 2/4/3/6;
+  overflow: hidden;
+  padding: 5px;
+  padding-left: 0px;
+}
+.code-container .explanation-group .explanation-block {
+  position: absolute;
+  height: 100%;
 }
 
 div#progress {

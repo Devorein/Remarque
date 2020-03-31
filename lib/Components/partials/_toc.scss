@@ -4,7 +4,7 @@
   background: #252525;
   border-radius: 5px;
   position: absolute;
-  width: 350px;
+  width: 100%;
   left: 0%;
 
   #settingsContainer {
@@ -78,7 +78,7 @@
     z-index: 0;
   }
 
-  .toc--L1 {
+  .toc--L1-item-container {
     $base-font-size: 18px;
 
     width: 100%;
@@ -93,6 +93,7 @@
       transition: background-color 150ms ease-in-out;
       padding: 3px;
       border-radius: 2px;
+      display: flex;
       &:hover {
         transition: background-color 150ms ease-in-out;
       }
@@ -111,24 +112,27 @@
       margin-top: 5px;
     }
 
-    .toc--L3 {
+    div.toc--L2-item-container {
+      padding: 0px 20px;
+    }
+
+    .toc--L3-item-container {
       padding: 0px 20px;
       font-size: $base-font-size - 2px;
+    }
 
-      .toc--L4 {
-        padding: 0px 20px;
-        font-size: $base-font-size - 4px;
+    .toc--L4-item-container {
+      padding: 0px 20px;
+      font-size: $base-font-size - 4px;
+    }
 
-        .toc--L5 {
-          padding: 0px 20px;
-          font-size: $base-font-size - 6px;
-
-          .toc--L6 {
-            padding: 0px 20px;
-            font-size: $base-font-size - 8px;
-          }
-        }
-      }
+    .toc--L5-item-container {
+      padding: 0px 20px;
+      font-size: $base-font-size - 6px;
+    }
+    .toc--L6-item-container {
+      padding: 0px 20px;
+      font-size: $base-font-size - 8px;
     }
   }
 }
@@ -157,10 +161,23 @@
     grid-template: 20px 20px/ 1fr 1fr 1fr 1fr;
     grid-gap: 5px;
     height: 50px;
-
-    #tocInputField {
+    & > * {
       width: 100%;
+    }
+    #tocInputField {
       grid-area: 1/1/2/5;
+    }
+    #tocItemStatus {
+      grid-area: 2/1/3/2;
+    }
+    #tocCodeSearch {
+      grid-area: 2/2/3/3;
+    }
+    #tocToggleCustom {
+      grid-area: 2/3/3/4;
+    }
+    #searchIgnoreCap {
+      grid-area: 2/4/3/5;
     }
   }
 }

@@ -18,6 +18,9 @@
   display: none;
 }
 
+.selected {
+  background: #222;
+}
 .low--text {
   background-color: rgba($global-green, 0.35);
 }
@@ -40,4 +43,13 @@ span.icon--toggle {
 .current-link {
   border-radius: 3px;
   padding: 5px;
+}
+
+.fs--toggle {
+  grid-template: 250px 250px /20px 1fr 1fr 1fr 1fr !important;
+  .file-group {
+    .file-block {
+      display: none;
+    }
+  }
 }
