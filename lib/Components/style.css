@@ -1103,6 +1103,78 @@ pre[data-line] {
   z-index: 10;
   cursor: pointer;
 }
+#overlay #overlayCancelIcon {
+  position: absolute;
+  left: 100%;
+  z-index: 5;
+  transform: translateX(-100%);
+}
+#overlay #overlayPrevUniqueIcon {
+  position: absolute;
+  padding: 5px;
+  top: 0px;
+  left: 50%;
+  font-size: 2em;
+  user-select: none;
+  transform: translateX(-50%) rotate(90deg);
+}
+#overlay #overlayNextUniqueIcon {
+  position: absolute;
+  padding: 5px;
+  top: 100%;
+  left: 50%;
+  font-size: 2em;
+  user-select: none;
+  transform: translate(-50%, -100%) rotate(-90deg);
+}
+#overlay .cloned-block {
+  position: absolute;
+  top: 50%;
+  font-size: 2em;
+  width: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 5px;
+  line-height: 40px;
+  text-align: center;
+}
+#overlay div#overlayNextIcon {
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-100%, -50%);
+  padding: 5px;
+  font-size: 2em;
+}
+#overlay div#overlayPrevIcon {
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px;
+  font-size: 2em;
+}
+#overlay div#overlayCounter {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  top: 30px;
+  border-radius: 5px;
+  width: 100px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+#overlay img {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
 #chapter-name {
   font-size: 2.5em;
@@ -1301,60 +1373,6 @@ h1.block-header {
   font-weight: bolder;
   text-transform: uppercase;
   user-select: none;
-}
-
-#overlay #overlayCancelIcon {
-  position: absolute;
-  left: 100%;
-  z-index: 5;
-  transform: translateX(-100%);
-}
-#overlay .cloned-block {
-  position: absolute;
-  top: 50%;
-  font-size: 2em;
-  width: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px;
-  border-radius: 5px;
-  line-height: 40px;
-  text-align: center;
-}
-#overlay div#overlayNextIcon {
-  user-select: none;
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  transform: translate(-100%, -50%);
-  padding: 5px;
-  font-size: 2em;
-}
-#overlay div#overlayPrevIcon {
-  user-select: none;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 5px;
-  font-size: 2em;
-}
-#overlay div#overlayCounter {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 5px;
-  border-radius: 5px;
-  width: 100px;
-  text-align: center;
-  font-weight: bolder;
-}
-
-#overlay img {
-  width: 100%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .highlight-line {
