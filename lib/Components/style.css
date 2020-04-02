@@ -38,12 +38,12 @@
   font-weight: bold;
   font-size: 1.2em;
 }
-.TOC div#tocSearchContainer #tocCodeSearch {
+.TOC div#tocSearchContainer #tocCodeSearchIcon {
   min-width: 20px;
 }
-.TOC div#tocSearchContainer #tocCodeSearch,
-.TOC div#tocSearchContainer #tocToggleCustom,
-.TOC div#tocSearchContainer #searchIgnoreCap {
+.TOC div#tocSearchContainer #tocCodeSearchIcon,
+.TOC div#tocSearchContainer #tocToggleCustomIcon,
+.TOC div#tocSearchContainer #searchIgnoreCapIcon {
   height: 25px;
   cursor: pointer;
   user-select: none;
@@ -141,13 +141,13 @@
 #TOC.TOC.limit #tocSearchContainer #tocItemStatus {
   grid-area: 2/1/3/2;
 }
-#TOC.TOC.limit #tocSearchContainer #tocCodeSearch {
+#TOC.TOC.limit #tocSearchContainer #tocCodeSearchIcon {
   grid-area: 2/2/3/3;
 }
-#TOC.TOC.limit #tocSearchContainer #tocToggleCustom {
+#TOC.TOC.limit #tocSearchContainer #tocToggleCustomIcon {
   grid-area: 2/3/3/4;
 }
-#TOC.TOC.limit #tocSearchContainer #searchIgnoreCap {
+#TOC.TOC.limit #tocSearchContainer #searchIgnoreCapIcon {
   grid-area: 2/4/3/5;
 }
 
