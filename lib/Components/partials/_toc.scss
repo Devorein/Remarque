@@ -83,10 +83,10 @@
 
     width: 100%;
     user-select: none;
-    padding: 30px;
     cursor: pointer;
+    padding: 0px 10px 0px 10px;
     font-size: $base-font-size;
-    height: calc(100vh - 30px);
+    height: calc(100vh - 50px);
     overflow: auto;
 
     .toc-item {
@@ -94,6 +94,7 @@
       padding: 3px;
       border-radius: 2px;
       display: flex;
+      width: fit-content;
       &:hover {
         transition: background-color 150ms ease-in-out;
       }

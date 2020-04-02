@@ -68,10 +68,10 @@
 .TOC .toc--L1-item-container {
   width: 100%;
   user-select: none;
-  padding: 30px;
   cursor: pointer;
+  padding: 0px 10px 0px 10px;
   font-size: 18px;
-  height: calc(100vh - 30px);
+  height: calc(100vh - 50px);
   overflow: auto;
 }
 .TOC .toc--L1-item-container .toc-item {
@@ -79,6 +79,7 @@
   padding: 3px;
   border-radius: 2px;
   display: flex;
+  width: fit-content;
 }
 .TOC .toc--L1-item-container .toc-item:hover {
   transition: background-color 150ms ease-in-out;
