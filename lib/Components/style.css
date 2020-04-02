@@ -1176,6 +1176,111 @@ pre[data-line] {
   transform: translate(-50%, -50%);
 }
 
+.code-container {
+  display: grid;
+  height: 500px;
+  grid-template: 250px 250px/1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+  position: relative;
+  margin: 10px 5px 10px 5px;
+}
+.code-container .file-group {
+  grid-area: 1/1/3/2;
+  padding: 10px;
+  padding-left: 15px;
+  cursor: pointer;
+  position: relative;
+  overflow: auto;
+}
+.code-container .file-group .file-toggle {
+  position: absolute;
+  left: calc(100% - 10px);
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.code-container .file-group > .file-block {
+  margin: 5px;
+  width: 95%;
+}
+.code-container .file-group .file-block.file-dir {
+  margin: 5px;
+}
+.code-container .file-group .file-block .file-item--file {
+  display: flex;
+  padding: 2px 5px;
+}
+.code-container .file-group .file-block .file-item-children {
+  padding-left: 10px;
+  margin-top: 5px;
+}
+.code-container .file-group .file-block .file-item-children .file-name {
+  transition: background-color 250ms ease-in-out;
+}
+.code-container .file-group .file-block .file-item-children .file-name:hover {
+  transition: background-color 250ms ease-in-out;
+}
+.code-container .file-group .file-block .file-item--toggle {
+  position: absolute;
+  left: calc(100% - 20px);
+}
+.code-container .file-group .file-block .file-item--folder {
+  display: flex;
+  border-radius: 5px;
+  position: relative;
+  width: 125px;
+  user-select: none;
+}
+.code-container .file-group .file-block .file-item--folder--icon {
+  display: flex;
+}
+.code-container .file-group .file-block .file-item--icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -2px;
+}
+.code-container .file-group .file-block .file-item--icon svg {
+  fill: black !important;
+}
+.code-container .code-group {
+  grid-area: 1/2/3/4;
+  overflow: hidden;
+  position: relative;
+  margin-top: 0px;
+}
+.code-container .code-group .code-block {
+  position: absolute;
+  height: 100%;
+  margin: 0px;
+  width: 100%;
+  padding-right: 0px;
+  overflow: auto;
+}
+.code-container .code-group .code-block .code-item {
+  height: 100%;
+}
+.code-container .output-group {
+  grid-area: 1/4/2/6;
+  overflow: hidden;
+  margin-top: 0px;
+  position: relative;
+}
+.code-container .output-group .output-block {
+  position: absolute;
+  height: 100%;
+}
+.code-container .explanation-group {
+  grid-area: 2/4/3/6;
+  overflow: hidden;
+  padding: 5px;
+  padding-left: 0px;
+}
+.code-container .explanation-group .explanation-block {
+  position: absolute;
+  height: 100%;
+}
+
 #chapter-name {
   font-size: 2.5em;
   height: 100px;
@@ -1509,110 +1614,6 @@ div.topic-container .subtopic-container .subtopicL2-container .subtopicL3-contai
   padding: 5px;
   width: 50px;
   border-radius: 5px;
-}
-
-.code-container {
-  display: grid;
-  height: 500px;
-  grid-template: 250px 250px/1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 5px;
-  position: relative;
-}
-.code-container .file-group {
-  grid-area: 1/1/3/2;
-  padding: 10px;
-  padding-left: 15px;
-  cursor: pointer;
-  position: relative;
-  overflow: auto;
-}
-.code-container .file-group .file-toggle {
-  position: absolute;
-  left: calc(100% - 10px);
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-.code-container .file-group > .file-block {
-  margin: 5px;
-  width: 95%;
-}
-.code-container .file-group .file-block.file-dir {
-  margin: 5px;
-}
-.code-container .file-group .file-block .file-item--file {
-  display: flex;
-  padding: 2px 5px;
-}
-.code-container .file-group .file-block .file-item-children {
-  padding-left: 10px;
-  margin-top: 5px;
-}
-.code-container .file-group .file-block .file-item-children .file-name {
-  transition: background-color 250ms ease-in-out;
-}
-.code-container .file-group .file-block .file-item-children .file-name:hover {
-  transition: background-color 250ms ease-in-out;
-}
-.code-container .file-group .file-block .file-item--toggle {
-  position: absolute;
-  left: calc(100% - 20px);
-}
-.code-container .file-group .file-block .file-item--folder {
-  display: flex;
-  border-radius: 5px;
-  position: relative;
-  width: 125px;
-  user-select: none;
-}
-.code-container .file-group .file-block .file-item--folder--icon {
-  display: flex;
-}
-.code-container .file-group .file-block .file-item--icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top: -2px;
-}
-.code-container .file-group .file-block .file-item--icon svg {
-  fill: black !important;
-}
-.code-container .code-group {
-  grid-area: 1/2/3/4;
-  overflow: hidden;
-  position: relative;
-  margin-top: 0px;
-}
-.code-container .code-group .code-block {
-  position: absolute;
-  height: 100%;
-  margin: 0px;
-  width: 100%;
-  padding-right: 0px;
-  overflow: auto;
-}
-.code-container .code-group .code-block .code-item {
-  height: 100%;
-}
-.code-container .output-group {
-  grid-area: 1/4/2/6;
-  overflow: hidden;
-  margin-top: 0px;
-  position: relative;
-}
-.code-container .output-group .output-block {
-  position: absolute;
-  height: 100%;
-}
-.code-container .explanation-group {
-  grid-area: 2/4/3/6;
-  overflow: hidden;
-  padding: 5px;
-  padding-left: 0px;
-}
-.code-container .explanation-group .explanation-block {
-  position: absolute;
-  height: 100%;
 }
 
 div#progress {

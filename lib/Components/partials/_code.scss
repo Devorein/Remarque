@@ -1,0 +1,115 @@
+.code-container {
+  display: grid;
+  height: 500px;
+  grid-template: 250px 250px/1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+  position: relative;
+  margin: 10px 5px 10px 5px;
+
+  .file-group {
+    grid-area: 1/1/3/2;
+    padding: 10px;
+    padding-left: 15px;
+    cursor: pointer;
+    position: relative;
+    overflow: auto;
+
+    .file-toggle {
+      position: absolute;
+      left: calc(100% - 10px);
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    & > .file-block {
+      margin: 5px;
+      width: 95%;
+    }
+    .file-block {
+      &.file-dir {
+        margin: 5px;
+      }
+      .file-item {
+        &--file {
+          display: flex;
+          padding: 2px 5px;
+        }
+        &-children {
+          padding-left: 10px;
+          margin-top: 5px;
+          & .file-name {
+            transition: background-color 250ms ease-in-out;
+
+            &:hover {
+              transition: background-color 250ms ease-in-out;
+            }
+          }
+        }
+        &--toggle {
+          position: absolute;
+          left: calc(100% - 20px);
+        }
+        &--folder {
+          display: flex;
+          border-radius: 5px;
+          position: relative;
+          width: 125px;
+          user-select: none;
+          &--icon {
+            display: flex;
+          }
+        }
+        &--icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          top: -2px;
+          svg {
+            fill: black !important;
+          }
+        }
+      }
+    }
+  }
+
+  .code-group {
+    grid-area: 1/2/3/4;
+    overflow: hidden;
+    position: relative;
+    margin-top: 0px;
+    .code-block {
+      position: absolute;
+      height: 100%;
+      margin: 0px;
+      width: 100%;
+      padding-right: 0px;
+      overflow: auto;
+      .code-item {
+        height: 100%;
+      }
+    }
+  }
+
+  .output-group {
+    grid-area: 1/4/2/6;
+    overflow: hidden;
+    margin-top: 0px;
+    position: relative;
+
+    .output-block {
+      position: absolute;
+      height: 100%;
+    }
+  }
+
+  .explanation-group {
+    grid-area: 2/4/3/6;
+    overflow: hidden;
+    padding: 5px;
+    padding-left: 0px;
+    .explanation-block {
+      position: absolute;
+      height: 100%;
+    }
+  }
+}
