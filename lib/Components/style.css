@@ -1617,7 +1617,7 @@ div.topic-container .subtopic-container .subtopicL2-container .subtopicL3-contai
   top: 100%;
   transform: translateY(-100%);
   display: grid;
-  grid-template: 30px 25px/50px 50px;
+  grid-template: 30px 25px/30px 30px;
   cursor: pointer;
 }
 #clockContainer #clock {
