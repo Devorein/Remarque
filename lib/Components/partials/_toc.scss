@@ -6,7 +6,6 @@
   position: absolute;
   width: 100%;
   left: 0%;
-
   #settingsContainer {
     display: flex;
     flex-direction: column;
@@ -95,8 +94,25 @@
       border-radius: 2px;
       display: flex;
       width: fit-content;
+      position: relative;
+      user-select: none;
+      & > * {
+        align-self: center;
+      }
       &:hover {
         transition: background-color 150ms ease-in-out;
+      }
+      .checkmark {
+        height: 15px;
+        width: 15px;
+        background-color: #eee;
+        font-weight: bolder;
+        margin-right: 10px;
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
       }
     }
     span.toc--counter,

@@ -80,9 +80,26 @@
   border-radius: 2px;
   display: flex;
   width: fit-content;
+  position: relative;
+  user-select: none;
+}
+.TOC .toc--L1-item-container .toc-item > * {
+  align-self: center;
 }
 .TOC .toc--L1-item-container .toc-item:hover {
   transition: background-color 150ms ease-in-out;
+}
+.TOC .toc--L1-item-container .toc-item .checkmark {
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+  font-weight: bolder;
+  margin-right: 10px;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
 }
 .TOC .toc--L1-item-container span.toc--counter,
 .TOC .toc--L1-item-container .toc-toggle {
