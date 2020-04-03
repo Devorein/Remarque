@@ -5,6 +5,21 @@
   transition: left 250ms ease-in-out;
 }
 
+p.text-block {
+  .low--text,
+  .medium--text,
+  .high--text {
+    border-radius: 2px;
+    padding: 3px;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+  }
+}
+
+.hide {
+  display: none;
+}
+
 .activated {
   background: rgba($global-green, 0.75) !important;
 }

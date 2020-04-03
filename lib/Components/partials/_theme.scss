@@ -27,13 +27,6 @@
       color: lighten($light-TOC-item-color, 10%);
     }
 
-    .toggle-container {
-      background: darken($light-primary-bg-color, 10%);
-      .toggle--button {
-        color: $light-primary-text-color;
-        background: darken($light-primary-bg-color, 5%);
-      }
-    }
     #slider {
       background: darken($light-primary-bg-color, 15%);
     }
@@ -50,7 +43,7 @@
   h6 {
     color: $light-header-item-color;
   }
-  #chapter-name {
+  .chapter-header {
     background-color: darken($light-primary-bg-color, 5%);
   }
 
@@ -243,14 +236,6 @@
       color: lighten($dark-TOC-item-color, 10%);
     }
 
-    .toggle-container {
-      background: darken($dark-primary-bg-color, 10%);
-      .toggle--button {
-        color: $dark-primary-text-color;
-        background: darken($dark-primary-bg-color, 5%);
-      }
-    }
-
     #slider {
       background: darken($dark-primary-bg-color, 15%);
     }
@@ -276,7 +261,7 @@
     color: $dark-header-item-color;
   }
 
-  #chapter-name {
+  .chapter-header {
     background-color: darken($dark-primary-bg-color, 5%);
   }
 

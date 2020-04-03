@@ -1,0 +1,98 @@
+.icon {
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
+#settingsContainer {
+  svg#pageExtremeTopIcon {
+    transform: rotate(180deg);
+  }
+
+  #theme-icon {
+    left: -5px;
+    position: relative;
+    width: 30px;
+  }
+
+  div#codeDisplayIcon {
+    padding: 5px;
+    font-weight: bolder;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+}
+
+#clockContainer {
+  font-size: 15px;
+  position: absolute;
+  left: 10px;
+  z-index: 8;
+  padding: 5px;
+  border-radius: 5px;
+  top: 100%;
+  transform: translateY(-100%);
+  display: grid;
+  grid-template: 30px 25px/30px 30px;
+  cursor: pointer;
+  #clock {
+    grid-area: 2/1/3/3;
+    font-weight: bold;
+  }
+  #clockPlayPause {
+    grid-area: 1/1/2/2;
+  }
+  #clockRestart {
+    grid-area: 1/2/2/3;
+  }
+  #clockPlayPause,
+  #clockRestart,
+  #clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+div#progressContainer {
+  width: calc(100% - 50px);
+  height: 10px;
+  display: flex;
+  z-index: 8;
+  position: absolute;
+  top: 10px;
+  left: 25px;
+
+  #progressBar {
+    width: calc(100% - 50px);
+  }
+
+  #progressCounter {
+    font-size: 10px;
+    width: 50px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    user-select: none;
+    cursor: pointer;
+  }
+}
+
+svg {
+  padding: 3px;
+}
+
+#clickSound {
+  display: none;
+}

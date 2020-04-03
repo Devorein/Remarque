@@ -1,3 +1,132 @@
+.linenumber-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 7px;
+  line-height: 21px;
+  left: 0px;
+  padding: 10px;
+  z-index: 8;
+  & > span {
+    opacity: 0.5;
+  }
+}
+
+.highlight {
+  &-line {
+    position: absolute;
+    height: 17px;
+    z-index: 7;
+    width: 100%;
+    left: 30px;
+    &--error {
+      background-color: rgba($global-red, 0.25);
+    }
+    &--output {
+      background-color: rgba($global-gray, 0.25);
+    }
+    &--input {
+      background-color: rgba($global-blue, 0.25);
+    }
+    &--low {
+      width: 75%;
+      background: rgba($global-green, 0.25);
+    }
+    &--medium {
+      width: 75%;
+      background: rgba($global-yellow, 0.25);
+    }
+    &--high {
+      width: 75%;
+      background: rgba($global-red, 0.25);
+    }
+    &--function {
+      &--1 {
+        background: rgba($global-yellow, 0.25);
+      }
+      &--2 {
+        background: rgba($global-orange, 0.25);
+      }
+      &--3 {
+        background: rgba($global-yellow, 0.25);
+      }
+    }
+  }
+  &-number {
+    border-radius: 3px;
+    font-size: 16px;
+    min-width: 30px;
+    text-align: center;
+    cursor: pointer;
+    padding: 3px;
+    margin-right: 5px;
+    &--error {
+      background-color: rgba($global-red, 0.5);
+    }
+    &--output {
+      background-color: rgba($global-gray, 0.5);
+    }
+    &--input {
+      background-color: rgba($global-blue, 0.5);
+    }
+    &--low {
+      background: rgba($global-green, 0.5);
+    }
+    &--medium {
+      background: rgba($global-yellow, 0.5);
+    }
+    &--high {
+      background: rgba($global-red, 0.5);
+    }
+    &--function {
+      &--1 {
+        background: darken(rgba($global-yellow, 0.5), 5);
+      }
+      &--2 {
+        background: darken(rgba($global-orange, 0.5), 5);
+      }
+      &--3 {
+        background: darken(rgba($global-yellow, 0.5), 15);
+      }
+    }
+  }
+}
+
+pre.output-block {
+  width: 100%;
+  overflow-x: auto;
+  flex: 35%;
+}
+
+.icon--copy,
+.icon--download {
+  position: absolute;
+  top: 0px;
+  width: 10px;
+  padding: 5px;
+  cursor: pointer;
+  z-index: 7;
+  transform: scale(1);
+  transition: transform 250ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 250ms ease-in-out;
+  }
+}
+
+.icon--copy {
+  left: calc(100% - 30px);
+}
+
+.icon--download {
+  left: 0px;
+  z-index: 8;
+  svg {
+    width: 15px;
+  }
+}
+
 .code-container {
   display: grid;
   height: 500px;
@@ -112,4 +241,20 @@
       height: 100%;
     }
   }
+}
+
+.snippet-block {
+  display: flex;
+  position: relative;
+  width: 100%;
+  min-width: 500px;
+  width: 50%;
+  max-width: 750px;
+}
+
+pre[class*="language-"] {
+  flex-grow: 1;
+  max-height: 500px;
+  margin-top: 0px;
+  background-color: red;
 }
