@@ -165,10 +165,10 @@
       }
     }
   }
-  #clock {
+  #clockContainer {
     background: lighten($light-primary-bg-color, 5%);
   }
-  #progress {
+  #progressContainer {
     #progressCounter {
       background: lighten($light-primary-bg-color, 5%);
     }
@@ -258,10 +258,10 @@
       background-color: darken($dark-primary-bg-color, 10%);
     }
   }
-  #clock {
+  #clockContainer {
     background-color: darken($dark-primary-bg-color, 10%);
   }
-  #progress {
+  #progressContainer {
     #progressCounter {
       background-color: darken($dark-primary-bg-color, 15%);
     }

@@ -371,20 +371,43 @@ div.topic-container {
   left: 0%;
 }
 
-#clock {
-  font-size: 10px;
+#clockContainer {
+  font-size: 15px;
   position: absolute;
-  left: 30px;
+  left: 10px;
   z-index: 8;
   padding: 5px;
-  width: 50px;
   border-radius: 5px;
+  top: 100%;
+  transform: translateY(-100%);
+  display: grid;
+  grid-template: 30px 25px/50px 50px;
+  cursor: pointer;
+  #clock {
+    grid-area: 2/1/3/3;
+    font-weight: bold;
+  }
+  #clockPlayPause {
+    grid-area: 1/1/2/2;
+  }
+  #clockRestart {
+    grid-area: 1/2/2/3;
+  }
+  #clockPlayPause,
+  #clockRestart,
+  #clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
 }
 
-svg#clockIcon {
-}
-
-div#progress {
+div#progressContainer {
   width: calc(100% - 50px);
   height: 10px;
   display: flex;

@@ -291,10 +291,10 @@
 .light .topic-container .subtopic-container .subtopicL2-container .subtopicL3-container .subtopicL3-header {
   background: #b3b3b3;
 }
-.light #clock {
+.light #clockContainer {
   background: #d9d9d9;
 }
-.light #progress #progressCounter {
+.light #progressContainer #progressCounter {
   background: #d9d9d9;
 }
 .light svg {
@@ -365,10 +365,10 @@
 .dark .TOC #settingsContainer {
   background-color: #1a1a1a;
 }
-.dark #clock {
+.dark #clockContainer {
   background-color: #1a1a1a;
 }
-.dark #progress #progressCounter {
+.dark #progressContainer #progressCounter {
   background-color: #0d0d0d;
 }
 .dark h1,
@@ -1607,17 +1607,45 @@ div.topic-container .subtopic-container .subtopicL2-container .subtopicL3-contai
   left: 0%;
 }
 
-#clock {
-  font-size: 10px;
+#clockContainer {
+  font-size: 15px;
   position: absolute;
-  left: 30px;
+  left: 10px;
   z-index: 8;
   padding: 5px;
-  width: 50px;
   border-radius: 5px;
+  top: 100%;
+  transform: translateY(-100%);
+  display: grid;
+  grid-template: 30px 25px/50px 50px;
+  cursor: pointer;
+}
+#clockContainer #clock {
+  grid-area: 2/1/3/3;
+  font-weight: bold;
+}
+#clockContainer #clockPlayPause {
+  grid-area: 1/1/2/2;
+}
+#clockContainer #clockRestart {
+  grid-area: 1/2/2/3;
+}
+#clockContainer #clockPlayPause,
+#clockContainer #clockRestart,
+#clockContainer #clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+#clockContainer #clockPlayPause svg,
+#clockContainer #clockRestart svg,
+#clockContainer #clock svg {
+  width: 30px;
+  height: 30px;
 }
 
-div#progress {
+div#progressContainer {
   width: calc(100% - 50px);
   height: 10px;
   display: flex;
@@ -1626,10 +1654,10 @@ div#progress {
   top: 10px;
   left: 25px;
 }
-div#progress #progressBar {
+div#progressContainer #progressBar {
   width: calc(100% - 50px);
 }
-div#progress #progressCounter {
+div#progressContainer #progressCounter {
   font-size: 10px;
   width: 50px;
   height: 20px;
