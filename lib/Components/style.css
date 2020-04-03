@@ -1645,4 +1645,8 @@ svg {
   padding: 3px;
 }
 
+#clickSound {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */
