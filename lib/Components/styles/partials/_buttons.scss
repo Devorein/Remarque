@@ -30,7 +30,6 @@
 #clockContainer {
   font-size: 15px;
   position: absolute;
-  left: 10px;
   z-index: 8;
   padding: 5px;
   border-radius: 5px;
@@ -66,13 +65,11 @@
 }
 
 div#progressContainer {
-  width: calc(100% - 50px);
   height: 10px;
   display: flex;
   z-index: 8;
   position: absolute;
   top: 10px;
-  left: 25px;
 
   #progressBar {
     width: calc(100% - 50px);
