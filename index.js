@@ -46,7 +46,7 @@ if (argv.convert) {
 		else showErrorMessage(`chapter ${target_chapter} doesn't exist`);
 	});
 	browserify(path.join(__dirname, 'lib', 'Components', 'scripts', 'index.js')).bundle((err, buf) => {
-		global.indexJS = buf.toString();
+		makeConstantProp('indexJS', buf.toString());
 		Object.values(chapters_to_convert).forEach(chapter => {
 			makeConstantProp('CHAPTER_NAME', chapter);
 			makeConstantProp('FILE_DIR', path.join(CURRENT_DIR, chapter));
