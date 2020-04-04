@@ -19,7 +19,7 @@
 }
 .TOC div#tocSearchContainer {
   display: grid !important;
-  grid-template: 20px 30px/1fr 1fr 1fr 1fr;
+  grid-template: 20px 30px/1fr 1fr 1fr 1fr 1fr;
   grid-gap: 5px;
   height: 50px;
 }
@@ -29,9 +29,10 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+  border-radius: 3px;
 }
 .TOC div#tocSearchContainer input#tocInputField {
-  grid-area: 1/1/2/5;
+  grid-area: 1/1/2/6;
   margin-right: 5px;
   border: none;
   outline: none;
@@ -51,18 +52,26 @@
 .TOC div#tocSearchContainer #tocCodeSearchIcon {
   grid-area: 2/2/3/3;
 }
-.TOC div#tocSearchContainer #tocCodeSearchIcon,
-.TOC div#tocSearchContainer #tocToggleCustomIcon,
-.TOC div#tocSearchContainer #searchIgnoreCapIcon {
-  cursor: pointer;
-  user-select: none;
-  background: rgba(255, 30, 0, 0.75);
-}
 .TOC div#tocSearchContainer #tocToggleCustomIcon {
   grid-area: 2/3/3/4;
 }
 .TOC div#tocSearchContainer #searchIgnoreCapIcon {
   grid-area: 2/4/3/5;
+}
+.TOC div#tocSearchContainer #searchUseRegex {
+  grid-area: 2/5/3/6;
+}
+.TOC div#tocSearchContainer #searchUseRegexIcon {
+  height: 30px;
+  width: 30px;
+}
+.TOC div#tocSearchContainer #tocCodeSearchIcon,
+.TOC div#tocSearchContainer #tocToggleCustomIcon,
+.TOC div#tocSearchContainer #searchIgnoreCapIcon,
+.TOC div#tocSearchContainer #searchUseRegex {
+  cursor: pointer;
+  user-select: none;
+  background: rgba(255, 30, 0, 0.75);
 }
 .TOC div#slider {
   width: 30px;
