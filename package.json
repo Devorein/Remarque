@@ -1,11 +1,12 @@
 {
   "name": "remarque",
   "version": "1.0.0",
-  "description": "\"Create remarkable notes from markdown files\"",
-  "main": "manip.js",
+  "description": "\"Turn your notes into a full blown web app\"",
+  "main": "convert.js",
   "dependencies": {
     "browserify": "^16.5.0",
     "chalk": "^3.0.0",
+    "highlight.js": "^9.18.1",
     "jsdom": "^16.2.0",
     "showdown": "^1.9.1",
     "yargs": "^15.3.0"
@@ -14,7 +15,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Arcoden",
+  "author": "Devorein",
   "license": "ISC",
   "bin": {
     "remarque": "./index.js"

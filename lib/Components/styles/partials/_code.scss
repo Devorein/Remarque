@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 10px;
+  top: 4px;
   line-height: 21px;
   left: 0px;
   padding: 10px;
@@ -211,6 +211,7 @@ pre.output-block {
       height: 100%;
       margin: 0px;
       width: 100%;
+      padding-left: 25px;
       padding-right: 0px;
       overflow: auto;
       .code-item {
@@ -245,7 +246,6 @@ pre.output-block {
 }
 
 .snippet-block {
-  display: flex;
   position: relative;
   width: 100%;
   min-width: 500px;
@@ -257,5 +257,4 @@ pre[class*="language-"] {
   flex-grow: 1;
   max-height: 500px;
   margin-top: 0px;
-  background-color: red;
 }
