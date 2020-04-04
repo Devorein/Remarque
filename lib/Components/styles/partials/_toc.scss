@@ -7,6 +7,12 @@
   width: 100%;
   left: 0%;
 
+  &.limit {
+    div#tocSearchContainer {
+      display: none;
+    }
+  }
+
   #settingsContainer {
     display: flex;
     flex-direction: column;
@@ -22,7 +28,7 @@
   }
 
   div#tocSearchContainer {
-    display: grid !important;
+    display: grid;
     grid-template: 20px 30px/ 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 5px;
     height: 50px;
