@@ -45,11 +45,11 @@ if (argv.convert) {
 		if (chapter) chapters_to_convert[index + 1] = chapter;
 		else showErrorMessage(`chapter ${target_chapter} doesn't exist`);
 	});
-	Object.values(chapters_to_convert).forEach(chapter => {
-		browserify(path.join(__dirname, 'lib', 'Components', 'index.js')).bundle((err, buf) => {
+	browserify(path.join(__dirname, 'lib', 'Components', 'scripts', 'index.js')).bundle((err, buf) => {
+		makeConstantProp('indexJS', buf.toString());
+		Object.values(chapters_to_convert).forEach(chapter => {
 			makeConstantProp('CHAPTER_NAME', chapter);
 			makeConstantProp('FILE_DIR', path.join(CURRENT_DIR, chapter));
-			makeConstantProp('indexJS', buf.toString());
 			convert();
 		});
 	});
