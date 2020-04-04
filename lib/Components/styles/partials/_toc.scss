@@ -98,12 +98,12 @@
   .toc--L1-item-container {
     $base-font-size: 18px;
 
-    width: calc(100% - 50px);
+    width: calc(100% - 15px);
     user-select: none;
     cursor: pointer;
-    margin: 0px 10px 0px 10px;
+    margin: 10px 10px 0px 10px;
     font-size: $base-font-size;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 75px);
     overflow: auto;
 
     .toc-item {

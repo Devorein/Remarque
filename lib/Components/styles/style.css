@@ -84,12 +84,12 @@
   z-index: 0;
 }
 .TOC .toc--L1-item-container {
-  width: calc(100% - 50px);
+  width: calc(100% - 15px);
   user-select: none;
   cursor: pointer;
-  margin: 0px 10px 0px 10px;
+  margin: 10px 10px 0px 10px;
   font-size: 18px;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 75px);
   overflow: auto;
 }
 .TOC .toc--L1-item-container .toc-item {
@@ -1462,12 +1462,11 @@ pre[class*=language-] {
   z-index: 8;
   padding: 5px;
   border-radius: 5px;
-  top: 100%;
-  transform: translateY(-100%);
   display: grid;
   grid-template: 30px 25px/30px 30px;
   cursor: pointer;
-  transition: top 200ms ease-in-out;
+  top: 100%;
+  transition: transform 250ms ease-in-out;
 }
 #clockContainer #clock {
   grid-area: 2/1/3/3;
@@ -1493,6 +1492,10 @@ pre[class*=language-] {
   width: 30px;
   height: 30px;
 }
+#clockContainer.visible {
+  top: 100%;
+  transform: translateY(-100%);
+}
 
 div#progressContainer {
   height: 10px;
@@ -1500,6 +1503,8 @@ div#progressContainer {
   z-index: 8;
   position: absolute;
   top: 10px;
+  transform: translateY(-250%);
+  transition: transform 250ms ease-in-out;
 }
 div#progressContainer #progressBar {
   width: calc(100% - 50px);
@@ -1514,6 +1519,10 @@ div#progressContainer #progressCounter {
   font-weight: bolder;
   user-select: none;
   cursor: pointer;
+}
+div#progressContainer.visible {
+  transform: translateY(-75%);
+  transition: transform 250ms ease-in-out;
 }
 
 svg {
@@ -1533,6 +1542,7 @@ body#preview {
   height: 100vh;
   overflow: hidden;
   margin: 0px;
+  position: relative;
 }
 body#preview div#content {
   position: absolute;
