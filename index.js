@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const argv = require('yargs').argv;
+const browserify = require('browserify');
 
 const { convert } = require('./lib/convert');
 const { showSuccessMessage, showErrorMessage } = require('./lib/output');
@@ -10,9 +11,9 @@ const { makeConstantProp } = require('./lib/utility');
 
 makeConstantProp('CURRENT_DIR', process.cwd());
 
-const chapters = {};
+let chapters = {};
 
-fs.readdirSync(CURRENT_DIR).filter((chapter) => chapter.match(/^[0-9]{1,2}\./)).forEach((chapter) => {
+fs.readdirSync(CURRENT_DIR).filter(chapter => chapter.match(/^[0-9]{1,2}\./)).forEach(chapter => {
 	chapters[chapter.match(/^[0-9]{1,2}/)[0]] = chapter;
 });
 
@@ -25,20 +26,31 @@ if (argv.convert) {
 		if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
 	}
 	else makeConstantProp('OUTPUT_DIR', null);
-	const chapter_to_convert = argv.convert;
-	if (Number.isInteger(chapter_to_convert) && chapter_to_convert > 0) {
-		const chapter_name = chapters[chapter_to_convert];
-		if (chapter_name) {
-			makeConstantProp('CHAPTER_NAME', chapter_name);
-			makeConstantProp('FILE_DIR', path.join(CURRENT_DIR, chapter_name));
-			convert();
+	let target_chapters = argv.convert.toString().split(' ');
+	target_chapters = target_chapters.map(target_chapter => {
+		if (target_chapter.includes('-')) {
+			let [ start, stop ] = target_chapter.split('-');
+			start = parseInt(start);
+			stop = parseInt(stop);
+			const temp = [];
+			for (let i = start; i <= stop; i++) temp.push(i);
+			return temp;
 		}
-		else showErrorMessage(`chapter ${chapter_to_convert} doesn't exist`);
-	}
-	else if (typeof chapter_to_convert === 'boolean')
-		for (let chapter in chapters) {
-			makeConstantProp('FILE_DIR', path.join(CURRENT_DIR, chapters[chapter]));
-			makeConstantProp('CHAPTER_NAME', chapters[chapter]);
+		else return parseInt(target_chapter);
+	});
+	target_chapters = Array.from(new Set(target_chapters.flat())).sort((a, b) => a - b);
+	const chapters_to_convert = {};
+	target_chapters.forEach((target_chapter, index) => {
+		const chapter = chapters[target_chapter];
+		if (chapter) chapters_to_convert[index + 1] = chapter;
+		else showErrorMessage(`chapter ${target_chapter} doesn't exist`);
+	});
+	Object.values(chapters_to_convert).forEach(chapter => {
+		browserify(path.join(__dirname, 'lib', 'Components', 'index.js')).bundle((err, buf) => {
+			makeConstantProp('CHAPTER_NAME', chapter);
+			makeConstantProp('FILE_DIR', path.join(CURRENT_DIR, chapter));
+			makeConstantProp('indexJS', buf.toString());
 			convert();
-		}
+		});
+	});
 }
