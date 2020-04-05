@@ -72,9 +72,9 @@
     #searchIgnoreCapIcon {
       grid-area: 2/4/3/5;
     }
-    #searchUseRegex {
+    #searchUseRegexIcon {
       grid-area: 2/5/3/6;
-      &Icon {
+      & svg {
         height: 30px;
         width: 30px;
       }
@@ -83,7 +83,7 @@
     #tocCodeSearchIcon,
     #tocToggleCustomIcon,
     #searchIgnoreCapIcon,
-    #searchUseRegex {
+    #searchUseRegexIcon {
       cursor: pointer;
       user-select: none;
       background: rgba($global-red, 0.75);

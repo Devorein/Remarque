@@ -61,17 +61,17 @@
 .TOC div#tocSearchContainer #searchIgnoreCapIcon {
   grid-area: 2/4/3/5;
 }
-.TOC div#tocSearchContainer #searchUseRegex {
+.TOC div#tocSearchContainer #searchUseRegexIcon {
   grid-area: 2/5/3/6;
 }
-.TOC div#tocSearchContainer #searchUseRegexIcon {
+.TOC div#tocSearchContainer #searchUseRegexIcon svg {
   height: 30px;
   width: 30px;
 }
 .TOC div#tocSearchContainer #tocCodeSearchIcon,
 .TOC div#tocSearchContainer #tocToggleCustomIcon,
 .TOC div#tocSearchContainer #searchIgnoreCapIcon,
-.TOC div#tocSearchContainer #searchUseRegex {
+.TOC div#tocSearchContainer #searchUseRegexIcon {
   cursor: pointer;
   user-select: none;
   background: rgba(255, 30, 0, 0.75);
