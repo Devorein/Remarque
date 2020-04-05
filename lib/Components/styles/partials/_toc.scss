@@ -1,7 +1,6 @@
 @import "./glovars";
 
 .TOC {
-  background: #252525;
   border-radius: 5px;
   position: absolute;
   width: 100%;
@@ -94,7 +93,6 @@
   div#slider {
     width: 30px;
     height: 100vh;
-    background: #1a1a1a;
     position: absolute;
     top: 0px;
     left: 100%;
@@ -130,20 +128,15 @@
       .checkmark {
         height: 18px;
         width: 18px;
-        background-color: #eee;
         font-weight: bolder;
         margin-right: 10px;
         font-size: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: black;
         svg {
           padding: 0px;
         }
-        // &.checked {
-        //   background-color: #24ff66bf;
-        // }
       }
     }
     span.toc--counter,

@@ -13,6 +13,9 @@
       &:hover {
         background-color: $light-primary-bg-color;
       }
+      .checkmark {
+        background-color: lighten($light-primary-bg-color, 5%);
+      }
     }
     .toc--L2-item {
       color: $light-TOC-item-color;
@@ -220,6 +223,9 @@
     .toc-item {
       &:hover {
         background-color: $dark-primary-bg-color;
+      }
+      .checkmark {
+        background-color: lighten($dark-primary-bg-color, 5%);
       }
     }
 

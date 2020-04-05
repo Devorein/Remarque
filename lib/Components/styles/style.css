@@ -1,5 +1,4 @@
 .TOC {
-  background: #252525;
   border-radius: 5px;
   position: absolute;
   width: 100%;
@@ -80,7 +79,6 @@
 .TOC div#slider {
   width: 30px;
   height: 100vh;
-  background: #1a1a1a;
   position: absolute;
   top: 0px;
   left: 100%;
@@ -114,14 +112,12 @@
 .TOC .toc--L1-item-container .toc-item .checkmark {
   height: 18px;
   width: 18px;
-  background-color: #eee;
   font-weight: bolder;
   margin-right: 10px;
   font-size: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
 }
 .TOC .toc--L1-item-container .toc-item .checkmark svg {
   padding: 0px;
@@ -189,6 +185,9 @@
 }
 .light .TOC .toc-item:hover {
   background-color: #ccc;
+}
+.light .TOC .toc-item .checkmark {
+  background-color: #d9d9d9;
 }
 .light .TOC .toc--L2-item {
   color: #444;
@@ -353,6 +352,9 @@
 }
 .dark .TOC .toc-item:hover {
   background-color: #333;
+}
+.dark .TOC .toc-item .checkmark {
+  background-color: #404040;
 }
 .dark .TOC .toc--L2-item {
   color: #35d7bb;
