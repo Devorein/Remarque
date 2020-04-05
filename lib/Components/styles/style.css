@@ -1274,6 +1274,9 @@ pre[class*=language-] {
   font-size: 1.5em;
   cursor: pointer;
 }
+#settingsContainer #settingsPage g {
+  fill: #f0f2f5;
+}
 
 #clockContainer {
   font-size: 15px;
