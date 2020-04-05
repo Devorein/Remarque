@@ -8,6 +8,7 @@
   left: 0%;
 
   &.limit {
+    .toc--L1-item-container,
     div#tocSearchContainer {
       display: none;
     }
@@ -196,6 +197,6 @@
   }
 }
 
-.dropzone {
-  transition: width 250ms ease-in-out;
+.transition {
+  transition: width 350ms ease-in-out, left 350ms ease-in-out;
 }

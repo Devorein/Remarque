@@ -5,6 +5,7 @@
   width: 100%;
   left: 0%;
 }
+.TOC.limit .toc--L1-item-container,
 .TOC.limit div#tocSearchContainer {
   display: none;
 }
@@ -165,8 +166,8 @@
   left: 100%;
 }
 
-.dropzone {
-  transition: width 250ms ease-in-out;
+.transition {
+  transition: width 350ms ease-in-out, left 350ms ease-in-out;
 }
 
 .light {
@@ -1366,7 +1367,6 @@ body#preview div#content {
   position: absolute;
   height: 100vh;
   overflow: auto;
-  transition: left 250ms ease-in-out, width 250ms ease-in-out;
 }
 body#preview div#content .chapter-header {
   font-size: 2.5em;
