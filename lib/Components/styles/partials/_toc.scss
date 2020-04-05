@@ -195,3 +195,7 @@
     left: 100%;
   }
 }
+
+.dropzone {
+  transition: width 250ms ease-in-out;
+}
