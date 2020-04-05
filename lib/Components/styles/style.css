@@ -1388,7 +1388,6 @@ body#preview div#app div#content .chapter-header {
 }
 
 #settings {
-  background-color: red;
   left: -100%;
 }
 
@@ -1397,6 +1396,7 @@ body#preview div#app div#content .chapter-header {
   width: 100vw;
   height: 100vh;
   left: 0%;
+  transition: left 250ms ease-in-out;
 }
 
 p.image-block {

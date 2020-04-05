@@ -16,6 +16,7 @@
   width: 100vw;
   height: 100vh;
   left: 0%;
+  transition: left 250ms ease-in-out;
 }
 
 p.image-block {
