@@ -1282,13 +1282,13 @@ pre[class*=language-] {
   padding: 5px;
   border-radius: 5px;
   display: grid;
-  grid-template: 30px 25px/30px 30px;
+  grid-template: 30px 25px/20px 20px 20px;
   cursor: pointer;
   top: 100%;
   transition: transform 250ms ease-in-out;
 }
 #clockContainer #clock {
-  grid-area: 2/1/3/3;
+  grid-area: 2/1/3/4;
   font-weight: bold;
 }
 #clockContainer #clockPlayPause {
@@ -1297,8 +1297,12 @@ pre[class*=language-] {
 #clockContainer #clockRestart {
   grid-area: 1/2/2/3;
 }
+#clockContainer #clockPosition {
+  grid-area: 1/3/2/4;
+}
 #clockContainer #clockPlayPause,
 #clockContainer #clockRestart,
+#clockContainer #clockPosition,
 #clockContainer #clock {
   display: flex;
   justify-content: center;
@@ -1307,6 +1311,7 @@ pre[class*=language-] {
 }
 #clockContainer #clockPlayPause svg,
 #clockContainer #clockRestart svg,
+#clockContainer #clockPosition svg,
 #clockContainer #clock svg {
   width: 30px;
   height: 30px;

@@ -34,13 +34,13 @@
   padding: 5px;
   border-radius: 5px;
   display: grid;
-  grid-template: 30px 25px/30px 30px;
+  grid-template: 30px 25px/20px 20px 20px;
   cursor: pointer;
   top: 100%;
   transition: transform 250ms ease-in-out;
 
   #clock {
-    grid-area: 2/1/3/3;
+    grid-area: 2/1/3/4;
     font-weight: bold;
   }
   #clockPlayPause {
@@ -49,8 +49,12 @@
   #clockRestart {
     grid-area: 1/2/2/3;
   }
+  #clockPosition {
+    grid-area: 1/3/2/4;
+  }
   #clockPlayPause,
   #clockRestart,
+  #clockPosition,
   #clock {
     display: flex;
     justify-content: center;
