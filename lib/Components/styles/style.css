@@ -112,8 +112,8 @@
   transition: background-color 150ms ease-in-out;
 }
 .TOC .toc--L1-item-container .toc-item .checkmark {
-  height: 15px;
-  width: 15px;
+  height: 18px;
+  width: 18px;
   background-color: #eee;
   font-weight: bolder;
   margin-right: 10px;
@@ -122,6 +122,9 @@
   justify-content: center;
   align-items: center;
   color: black;
+}
+.TOC .toc--L1-item-container .toc-item .checkmark svg {
+  padding: 0px;
 }
 .TOC .toc--L1-item-container span.toc--counter,
 .TOC .toc--L1-item-container .toc-toggle {

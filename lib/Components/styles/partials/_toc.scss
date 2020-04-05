@@ -128,8 +128,8 @@
         transition: background-color 150ms ease-in-out;
       }
       .checkmark {
-        height: 15px;
-        width: 15px;
+        height: 18px;
+        width: 18px;
         background-color: #eee;
         font-weight: bolder;
         margin-right: 10px;
@@ -138,6 +138,12 @@
         justify-content: center;
         align-items: center;
         color: black;
+        svg {
+          padding: 0px;
+        }
+        // &.checked {
+        //   background-color: #24ff66bf;
+        // }
       }
     }
     span.toc--counter,
