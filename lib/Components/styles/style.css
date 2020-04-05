@@ -1371,12 +1371,12 @@ body#preview {
   margin: 0px;
   position: relative;
 }
-body#preview div#content {
+body#preview div#app div#content {
   position: absolute;
   height: 100vh;
   overflow: auto;
 }
-body#preview div#content .chapter-header {
+body#preview div#app div#content .chapter-header {
   font-size: 2.5em;
   height: 100px;
   padding: 0px;
@@ -1385,6 +1385,18 @@ body#preview div#content .chapter-header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#settings {
+  background-color: red;
+  left: -100%;
+}
+
+.page {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0%;
 }
 
 p.image-block {
