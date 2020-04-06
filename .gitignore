@@ -1,0 +1,12 @@
+node_modules
+Components/debug.log
+package-lock.json
+wishlist.md
+documentation.md
+algorithm.md
+test.js
+test.html
+/tests
+.vscode
+/lib/Components/debug.log
+/lib/Components/Codeworkspace.code-workspace
