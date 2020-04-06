@@ -664,7 +664,7 @@ html {
   overflow: auto;
 }
 
-pre code[class*="language-"] {
+pre code[class*=language-] {
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   font-size: 16px;
   text-align: left;
@@ -679,8 +679,8 @@ pre code[class*="language-"] {
   margin-left: 20px;
 }
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"],
+:not(pre) > code[class*=language-],
+pre[class*=language-],
 .output-block {
   background: #1c1c1c;
 }
@@ -1102,7 +1102,7 @@ pre.output-block {
   max-width: 750px;
 }
 
-pre[class*="language-"] {
+pre[class*=language-] {
   flex-grow: 1;
   max-height: 500px;
   margin-top: 0px;
@@ -1392,15 +1392,12 @@ body div#app div#content .chapter-header {
 }
 
 #groups {
-  z-index: -5;
-}
-
-#groupCancelIcon {
-  z-index: -5;
+  left: -100%;
 }
 
 #settings {
   left: -100%;
+  z-index: -1;
 }
 
 .page {
@@ -1471,19 +1468,13 @@ h1.block-header {
   padding: 0px;
 }
 
-div.topic-container .subtopic-container .subtopicL2-container .subtopicL3-container,
-div.topic-container .subtopic-container .subtopicL2-container,
-div.topic-container .subtopic-container,
-div.topic-container {
+div.topic-container .subtopic-container .subtopicL2-container .subtopicL3-container, div.topic-container .subtopic-container .subtopicL2-container, div.topic-container .subtopic-container, div.topic-container {
   padding: 10px;
   margin-bottom: 10px;
   margin-left: 10px;
 }
 
-div.topic-container .subtopic-container .subtopicL2-container .subtopicL3-container .subtopicL3-header,
-div.topic-container .subtopic-container .subtopicL2-container .subtopicL2-header,
-div.topic-container .subtopic-container .subtopic-header,
-div.topic-container .topic-header {
+div.topic-container .subtopic-container .subtopicL2-container .subtopicL3-container .subtopicL3-header, div.topic-container .subtopic-container .subtopicL2-container .subtopicL2-header, div.topic-container .subtopic-container .subtopic-header, div.topic-container .topic-header {
   padding: 5px;
   text-align: center;
   font-weight: 500;
