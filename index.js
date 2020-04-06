@@ -24,11 +24,54 @@ require('yargs')
 		process.exit(1);
 	})
 	.scriptName('remarque')
-	.command(
-		[ 'convert [-c] [chapter] [-o] [dir]', 'cnv' ],
-		chalk.green('Converts the speficied chapters to specified output directory'),
-		function(yargs) {
+	.middleware(argv => {
+		if (!argv.config && !argv.output) {
+			argv.output = 'OUTPUT';
+			argv.o = 'OUTPUT';
+		}
+		if (!argv.config && !argv.chapters) {
+			argv.chapters = 'all';
+			argv.c = 'all';
+		}
+	}, true)
+	.command({
+		command : 'convert [o]',
+		aliases : [ 'cnv' ],
+		desc    : chalk.green(
+			'Converts the speficied chapters to specified output directory using specific arguments or path to a config json'
+		),
+		builder(yargs) {
 			return yargs
+				.options({
+					c : {
+						alias              : 'chapters',
+						describe           : 'Comma separated list of chapters to convert',
+						type               : 'string',
+						coerce             : val => (val === '' ? 'all' : parseChapters(val)),
+						group              : 'Convert Options',
+						defaultDescription : 'Convert all chapters',
+						conflicts          : [ 'config', 'j' ]
+					},
+					o : {
+						alias              : 'output',
+						describe           : 'Output to the specified directory',
+						coerce             : val => (val === '' ? 'OUTPUT' : val),
+						type               : 'string',
+						group              : 'Convert Options',
+						defaultDescription : 'Dumps to OUTPUT folder relative to cwd',
+						conflicts          : [ 'config', 'j' ]
+					},
+					j : {
+						alias              : 'config',
+						describe           : 'Path to custom configuration json file relative to cwd',
+						type               : 'string',
+						coerce             : val =>
+							path.join(process.cwd(), val === '' ? 'remarque.json' : `${val}.json`),
+						defaultDescription : 'remarque.json file on cwd',
+						group              : 'Convert Options',
+						conflicts          : [ 'c', 'chapters', 'o', 'outputs' ]
+					}
+				})
 				.example('$0 convert -c', 'Converts all the chapters')
 				.example('$0 convert -c 1', 'Convert the chapter 1')
 				.example('$0 convert -c 1-5', 'Convert chapters 1-5')
@@ -37,27 +80,23 @@ require('yargs')
 				.example('$0 convert -c 1 -o OUTPUTS', 'dumps chapter 1 to OUTPUTS directory')
 				.example('$0 convert -c -o OUTPUTS', 'dumps all the converted files to OUTPUTS directory')
 				.example('$0 convert -c -o', 'dumps all the converted files to OUTPUT directory')
-				.options({
-					c : {
-						alias              : 'chapters',
-						describe           : 'Comma separated list of chapters to convert',
-						type               : 'string',
-						coerce             : val => (val !== 'all' ? parseChapters(val) : 'all'),
-						group              : 'Convert Options',
-						default            : 'all',
-						defaultDescription : 'Convert all chapters'
-					},
-					o : {
-						alias              : 'output',
-						describe           : 'Output to the specified directory',
-						type               : 'string',
-						group              : 'Convert Options',
-						default            : 'OUTPUT',
-						defaultDescription : 'Dumps to OUTPUT folder relative to cwd'
-					}
-				});
+				.example('$0 convert -j', 'Get all the configuration data from cwd remarque.json')
+				.example('$0 convert -j PATH', 'Get all the configuration data from custom path relative to cwd')
+				.epilogue(
+					'For more information go to \nhttps://github.com/Devorein/Remarque/blob/master/README.md#convert'
+				);
 		},
-		function(argv) {
+		handler(argv) {
+			if (argv.config) {
+				if (!fs.existsSync(argv.config)) console.log(chalk.red('Configuration file not found'));
+				else {
+					const options = JSON.parse(fs.readFileSync(argv.config));
+					argv.output = options.output || options.o;
+					argv.output = argv.output === undefined ? 'OUTPUT' : argv.output;
+					argv.chapters = options.chapters || options.c;
+					argv.chapters = argv.chapters === undefined ? 'all' : parseChapters(argv.chapters);
+				}
+			}
 			if (!fs.existsSync(argv.output)) fs.mkdirSync(`${CURRENT_DIR}\\${argv.output}`);
 			browserify(path.join(__dirname, 'lib', 'Components', 'scripts', 'index.js')).bundle((err, buf) => {
 				argv.chapters.forEach(chapter_num => {
@@ -73,7 +112,7 @@ require('yargs')
 				});
 			});
 		}
-	)
+	})
 	.demandCommand(
 		1,
 		1,
