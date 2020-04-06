@@ -5,12 +5,12 @@
 @import "./partials/anim";
 @import "./partials/highlight";
 @import "./partials/buttons";
-@import "../../Pages/App/code";
-@import "../../Pages/App/toc";
-@import "../../Pages/App/app";
-@import "../../Pages/Groups/overlay";
-@import "../../Pages/Groups/groups";
-@import "../../Pages/Settings/settings";
+@import "./partials/code";
+@import "./partials/toc";
+@import "./partials/app";
+@import "./partials/overlay";
+@import "./partials/groups";
+@import "./partials/settings";
 
 .page {
   position: absolute;

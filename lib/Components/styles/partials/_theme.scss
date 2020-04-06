@@ -2,6 +2,11 @@
   color: $light-primary-text-color;
   background-color: $light-primary-bg-color;
 
+  #groups {
+    h2.groupContainerHeader {
+      background: lighten($light-primary-bg-color, 5%);
+    }
+  }
   .TOC {
     background: darken($light-primary-bg-color, 5%);
 
@@ -130,6 +135,9 @@
       transition: background-color 250ms ease-in-out, padding 250ms ease-in-out;
     }
   }
+  .groupContainer {
+    background: lighten($light-primary-bg-color, 10%);
+  }
   .topic-container {
     background: lighten($light-primary-bg-color, 10%);
 
@@ -202,7 +210,7 @@
   #overlay {
     div#overlayNextIcon,
     div#overlayPrevIcon {
-      color: darken($light-primary-bg-color, 5%);
+      color: lighten($light-primary-bg-color, 5%);
     }
     #overlayCounter {
       background-color: darken($light-primary-bg-color, 5%);
@@ -213,6 +221,12 @@
 .dark {
   color: $dark-primary-text-color;
   background-color: $dark-primary-bg-color;
+
+  #groups {
+    h2.groupContainerHeader {
+      background: lighten($dark-primary-bg-color, 5%);
+    }
+  }
 
   .TOC {
     background: darken($dark-primary-bg-color, 5%);
@@ -350,6 +364,9 @@
       transition: background-color 250ms ease-in-out, padding 250ms ease-in-out;
     }
   }
+  .groupContainer {
+    background: lighten($dark-primary-bg-color, 10%);
+  }
   .topic-container {
     background: lighten($dark-primary-bg-color, 10%);
 
@@ -415,7 +432,7 @@
   #overlay {
     div#overlayNextIcon,
     div#overlayPrevIcon {
-      color: darken($dark-primary-bg-color, 5%);
+      color: lighten($dark-primary-bg-color, 5%);
     }
     #overlayCounter {
       background-color: darken($dark-primary-bg-color, 5%);
