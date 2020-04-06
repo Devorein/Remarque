@@ -2,6 +2,15 @@
 
 A package to convert your markdown to a full blown web app
 
+## Steps
+
+1. Clone or download the `experiment` branch. It always has the latest commits
+2. Go into the remarque directory by using `cd Remarque`.
+3. Make sure you have node.js installed on your machine
+4. Install all the dependencies by running `npm i`
+5. After that just run `npm i -g`, to install remarque globally
+6. Follow the <a href="./Guidelines.md">Guidelines</a> and for a overview of the commands check below.
+
 ## Package
 
 WIP

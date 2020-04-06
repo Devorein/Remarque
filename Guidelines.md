@@ -1,5 +1,7 @@
 # Guidelines
 
+Follow the following guidelines while writing your notes, to get the proper output
+
 ## Blocks
 
 Blocks are any element of the page that contains information
