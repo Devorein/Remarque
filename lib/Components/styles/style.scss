@@ -1,15 +1,16 @@
 @import "./partials/glovars";
-@import "./partials/toc";
 @import "./partials/theme";
 @import "./partials/state";
 @import "./partials/init";
 @import "./partials/anim";
 @import "./partials/highlight";
-@import "./partials/overlay";
-@import "./partials/code";
 @import "./partials/buttons";
-@import "./partials/app";
-@import "./partials/settings";
+@import "../../Pages/App/code";
+@import "../../Pages/App/toc";
+@import "../../Pages/App/app";
+@import "../../Pages/Groups/overlay";
+@import "../../Pages/Groups/groups";
+@import "../../Pages/Settings/settings";
 
 .page {
   position: absolute;
