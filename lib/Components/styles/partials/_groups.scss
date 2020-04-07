@@ -4,6 +4,9 @@
     width: 100%;
     height: 100%;
     padding: 10px;
+    display: grid;
+    grid-template: 1fr 1fr/1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
   }
   .groupContainer {
     padding: 5px;
