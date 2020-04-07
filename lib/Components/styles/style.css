@@ -1144,7 +1144,7 @@ pre[class*=language-] {
 }
 .TOC div#tocSearchContainer {
   display: grid;
-  grid-template: 20px 30px/1fr 1fr 1fr 1fr 1fr;
+  grid-template: 30px 30px/1fr 1fr 1fr 1fr;
   grid-gap: 5px;
   height: 50px;
 }
@@ -1157,7 +1157,7 @@ pre[class*=language-] {
   border-radius: 3px;
 }
 .TOC div#tocSearchContainer input#tocInputField {
-  grid-area: 1/1/2/6;
+  grid-area: 1/1/2/5;
   margin-right: 5px;
   border: none;
   outline: none;
@@ -1166,27 +1166,35 @@ pre[class*=language-] {
   font-size: 1.2em;
 }
 .TOC div#tocSearchContainer #tocItemStatus {
-  grid-area: 2/1/3/2;
+  grid-area: 1/5/2/6;
+  min-width: 75px;
+  display: flex;
+  justify-content: space-evenly;
 }
 .TOC div#tocSearchContainer #tocItemStatus #tocHiddenItems {
   color: rgba(255, 30, 0, 0.75);
 }
+.TOC div#tocSearchContainer #tocItemStatus #tocSelectedItems {
+  color: rgba(5, 251, 79, 0.75);
+}
 .TOC div#tocSearchContainer #tocItemStatus > * {
   font-size: 20px;
 }
-.TOC div#tocSearchContainer #tocCodeSearchIcon {
-  grid-area: 2/2/3/3;
+.TOC div#tocSearchContainer #tocButtonContainer {
+  grid-area: 2/1/3/6;
+  display: flex;
 }
-.TOC div#tocSearchContainer #tocToggleCustomIcon {
-  grid-area: 2/3/3/4;
+.TOC div#tocSearchContainer #tocButtonContainer > * {
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
 }
-.TOC div#tocSearchContainer #searchIgnoreCapIcon {
-  grid-area: 2/4/3/5;
-}
-.TOC div#tocSearchContainer #searchUseRegexIcon {
-  grid-area: 2/5/3/6;
-}
-.TOC div#tocSearchContainer #searchUseRegexIcon svg {
+.TOC div#tocSearchContainer #tocButtonContainer #searchUseRegexIcon svg {
   height: 30px;
   width: 30px;
 }
