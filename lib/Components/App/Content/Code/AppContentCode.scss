@@ -147,7 +147,10 @@ pre.output-block {
       position: absolute;
       left: calc(100% - 10px);
       top: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%) rotateZ(90deg);
+      svg {
+        width: 15px;
+      }
     }
     & > .file-block {
       margin: 5px;
@@ -284,6 +287,20 @@ pre[class*="language-"] {
       &_group {
         background-color: darken($dark-primary-bg-color, 10%);
       }
+    }
+  }
+}
+
+.file-item--folder {
+  position: relative;
+  .file-item--toggle {
+    position: absolute;
+    top: 50%;
+    left: calc(100% - 10px);
+    transform: translateY(-50%);
+    svg {
+      width: 10px;
+      transform: rotateZ(180deg);
     }
   }
 }
