@@ -1,0 +1,78 @@
+#app_toc_content {
+  $base-font-size: 18px;
+
+  width: calc(100% - 15px);
+  user-select: none;
+  cursor: pointer;
+  margin: 20px 10px 0px 10px;
+  font-size: $base-font-size;
+  height: calc(100vh - 75px);
+  overflow: auto;
+
+  .app_toc_content_item {
+    transition: background-color 150ms ease-in-out;
+    padding: 3px;
+    border-radius: 2px;
+    display: flex;
+    width: fit-content;
+    position: relative;
+    user-select: none;
+    white-space: nowrap;
+
+    & > * {
+      align-self: center;
+    }
+    &:hover {
+      transition: background-color 150ms ease-in-out;
+    }
+    .checkmark {
+      height: 18px;
+      width: 18px;
+      font-weight: bolder;
+      margin-right: 10px;
+      font-size: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg {
+        padding: 0px;
+      }
+    }
+  }
+  span.toc--counter,
+  .toc-toggle {
+    margin-right: 5px;
+  }
+
+  div.toc--L2-item {
+    margin-top: 10px;
+  }
+  div.toc--L3-item,
+  div.toc--L4-item,
+  div.toc--L5-item {
+    margin-top: 5px;
+  }
+
+  div.toc--L2-item-container {
+    padding: 0px 20px;
+  }
+
+  .toc--L3-item-container {
+    padding: 0px 20px;
+    font-size: $base-font-size - 2px;
+  }
+
+  .toc--L4-item-container {
+    padding: 0px 20px;
+    font-size: $base-font-size - 4px;
+  }
+
+  .toc--L5-item-container {
+    padding: 0px 20px;
+    font-size: $base-font-size - 6px;
+  }
+  .toc--L6-item-container {
+    padding: 0px 20px;
+    font-size: $base-font-size - 8px;
+  }
+}

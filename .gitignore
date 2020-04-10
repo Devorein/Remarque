@@ -1,5 +1,5 @@
 node_modules
-Components/debug.log
+Assets/debug.log
 package-lock.json
 wishlist.md
 documentation.md
@@ -8,5 +8,5 @@ test.js
 test.html
 /tests
 .vscode
-/lib/Components/debug.log
-/lib/Components/Codeworkspace.code-workspace
+/lib/Assets/debug.log
+/lib/Assets/Codeworkspace.code-workspace

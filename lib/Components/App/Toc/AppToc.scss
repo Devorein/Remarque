@@ -1,0 +1,23 @@
+#app_toc {
+  border-radius: 5px;
+  position: absolute;
+  width: 100%;
+  left: 0%;
+
+  &.limit {
+    & #app_toc_content,
+    & #app_toc_search {
+      display: none;
+    }
+  }
+
+  &_slider {
+    width: 30px;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    cursor: pointer;
+    z-index: 0;
+  }
+}

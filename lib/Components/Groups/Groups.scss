@@ -1,0 +1,49 @@
+#groups {
+  #groups_content {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template: 1fr 1fr/1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+    padding: 5px;
+  }
+}
+
+.light {
+  .groups_content {
+    &_item {
+      background: darken($light-primary-bg-color, 5%);
+      &_header {
+        background: darken($light-primary-bg-color, 10%);
+        display: flex;
+        justify-content: center;
+      }
+      &_content {
+        padding: 5px;
+        &_item {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+.dark {
+  .groups_content {
+    &_item {
+      background: darken($dark-primary-bg-color, 5%);
+      &_header {
+        background: darken($dark-primary-bg-color, 10%);
+        display: flex;
+        justify-content: center;
+      }
+      &_content {
+        padding: 5px;
+        &_item {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

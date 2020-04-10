@@ -1,0 +1,15 @@
+#app_toc_buttons {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 100%;
+  top: 0px;
+  width: 30px;
+  padding: 2px;
+  cursor: pointer;
+  & > * {
+    margin: 3px;
+    padding: 2px;
+    display: flex;
+  }
+}

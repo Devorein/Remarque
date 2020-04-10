@@ -1,0 +1,32 @@
+#app_dropzone {
+  &_right {
+    left: 100%;
+    transform: translate(-100%);
+    #app_toc {
+      &_buttons {
+        left: -30px;
+      }
+
+      &_slider {
+        left: -30px;
+      }
+    }
+  }
+
+  &_left {
+    left: 0%;
+    &_slider {
+      left: 100%;
+    }
+  }
+}
+
+.transition {
+  transition: width 350ms ease-in-out, left 350ms ease-in-out;
+}
+
+.dropzone {
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+}

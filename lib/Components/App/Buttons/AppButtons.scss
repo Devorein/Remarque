@@ -1,0 +1,37 @@
+#app_buttons {
+  position: absolute;
+  top: calc(100% - 30px);
+  right: calc(50% + 10px);
+  display: flex;
+  width: fit-content;
+  border-radius: 3px;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+  z-index: 5;
+  & > * {
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+  }
+  #app_button {
+    &_top {
+      transform: rotate(180deg);
+    }
+    &_settings g g {
+      fill: #f0f2f5;
+    }
+  }
+}
+
+.light {
+  #app_buttons {
+    background: darken($light-primary-bg-color, 10%);
+  }
+}
+
+.dark {
+  #app_buttons {
+    background: darken($dark-primary-bg-color, 10%);
+  }
+}

@@ -1,0 +1,103 @@
+@import "./Utils/glovars";
+@import "./Utils/theme";
+@import "./Utils/state";
+@import "./Utils/init";
+@import "./Utils/anim";
+@import "./Utils/highlight";
+
+@import "./App/App.scss";
+@import "./App/Content/AppContent.scss";
+@import "./App/Progress/AppProgress.scss";
+@import "./App/Clock/AppClock.scss";
+@import "./App/Toc/AppToc.scss";
+@import "./App/Toc/Content/AppTocContent.scss";
+@import "./App/Toc/Button/AppTocButtons.scss";
+@import "./App/Toc/Search/AppTocSearch.scss";
+@import "./App/Dropzone/AppDropzone.scss";
+@import "./App/Buttons/AppButtons.scss";
+@import "./Buttons/Buttons.scss";
+@import "./App/Content/Code/AppContentCode.scss";
+@import "./Groups/Groups.scss";
+@import "./Groups/Overlay/GroupsOverlay.scss";
+
+.page {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0%;
+  transition: left 250ms ease-in-out;
+}
+
+.icon {
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
+p.image-block {
+  display: flex;
+  justify-content: center;
+}
+
+svg {
+  width: 20px;
+  height: 20px;
+}
+
+audio {
+  display: none;
+}
+
+.header--topic {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2em;
+  padding-top: 0px;
+}
+
+.explanation-block {
+  margin-top: 10px;
+}
+
+.text-block {
+  font-size: 1.25em;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.explanation-lines li {
+  list-style-type: disc;
+}
+
+li > ul {
+  opacity: 1;
+  transition: opacity 1000ms ease-in-out, max-height 1000ms ease-in-out;
+  max-height: 1000px;
+}
+
+ul.explanation-lines {
+  max-height: 250px;
+  overflow: auto;
+}
+
+.block-container {
+  padding: 5px;
+  margin: 10px 10px 10px 0px;
+}
+
+h1.block-header {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bolder;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.block-header {
+  padding: 0px;
+}

@@ -8,6 +8,7 @@
     "chalk": "^3.0.0",
     "highlight.js": "^9.18.1",
     "jsdom": "^16.2.0",
+    "node-sass": "^4.13.1",
     "showdown": "^1.9.1",
     "yargs": "^15.3.0"
   },

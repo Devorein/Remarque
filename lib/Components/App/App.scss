@@ -1,0 +1,26 @@
+#body {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2rem;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0px;
+  position: relative;
+
+  #app {
+  }
+}
+
+.dark {
+  ::selection {
+    background-color: lighten($dark-primary-bg-color, 5%);
+  }
+}
+
+.light {
+  ::selection {
+    background-color: darken($light-primary-bg-color, 5%);
+  }
+}

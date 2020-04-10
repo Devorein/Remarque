@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const browserify = require('browserify');
 const chalk = require('chalk');
+const sass = require('node-sass');
 
 const { convert } = require('./lib/convert');
 const { showSuccessMessage, showErrorMessage } = require('./lib/output');
@@ -98,17 +99,25 @@ require('yargs')
 				}
 			}
 			if (!fs.existsSync(argv.output)) fs.mkdirSync(`${CURRENT_DIR}\\${argv.output}`);
-			browserify(path.join(__dirname, 'lib', 'Components', 'scripts', 'index.js')).bundle((err, buf) => {
+			browserify(path.join(__dirname, 'lib', 'Components', 'index.js')).bundle((err, buf) => {
+				if (err) console.log(err);
+				makeConstantProp('indexJS', buf.toString());
+				fs.writeFileSync(
+					path.join(__dirname, 'lib', 'Components', 'style.css'),
+					sass.renderSync({
+						file        : path.join(__dirname, 'lib', 'Components', 'style.scss'),
+						outputStyle : 'compressed'
+					}).css
+				);
 				argv.chapters.forEach(chapter_num => {
 					makeConstantProp('OUTPUT_DIR', path.join(CURRENT_DIR, argv.output));
 					const chapter = chapters[chapter_num];
 					if (chapter) {
-						makeConstantProp('indexJS', buf.toString());
 						makeConstantProp('CHAPTER_NAME', chapter);
 						makeConstantProp('FILE_DIR', path.join(CURRENT_DIR, chapter));
 						convert();
 					}
-					else showErrorMessage(`chapter ${target_chapter} doesn't exist`);
+					else showErrorMessage(`chapter ${chapter} doesn't exist`);
 				});
 			});
 		}
