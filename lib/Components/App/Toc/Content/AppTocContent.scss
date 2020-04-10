@@ -35,7 +35,9 @@
       justify-content: center;
       align-items: center;
       svg {
+        transition: transform 150ms ease-in-out;
         padding: 0px;
+        transform: scale(0);
       }
     }
   }
