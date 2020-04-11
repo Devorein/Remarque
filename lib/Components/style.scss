@@ -3,10 +3,11 @@
 @import "./Utils/state";
 @import "./Utils/init";
 @import "./Utils/anim";
-@import "./Utils/highlight";
+@import "./Utils/prism";
 
 @import "./App/App.scss";
 @import "./App/Content/AppContent.scss";
+@import "./App/Content/Code/AppContentCode.scss";
 @import "./App/Progress/AppProgress.scss";
 @import "./App/Clock/AppClock.scss";
 @import "./App/Toc/AppToc.scss";
@@ -16,7 +17,6 @@
 @import "./App/Dropzone/AppDropzone.scss";
 @import "./App/Buttons/AppButtons.scss";
 @import "./Buttons/Buttons.scss";
-@import "./App/Content/Code/AppContentCode.scss";
 @import "./Groups/Groups.scss";
 @import "./Groups/Overlay/GroupsOverlay.scss";
 
