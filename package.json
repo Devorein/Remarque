@@ -1,8 +1,8 @@
 {
   "name": "remarque",
   "version": "1.0.0",
-  "description": "\"Turn your notes into a full blown web app\"",
-  "main": "convert.js",
+  "description": "\"Turn your markdown notes to a full blown web app\"",
+  "main": "./remarque.js",
   "dependencies": {
     "browserify": "^16.5.0",
     "chalk": "^3.0.0",
@@ -16,9 +16,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Devorein",
+  "author": "Devon Reid",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Devorein/Remarque.git"
+  },
   "bin": {
-    "remarque": "./index.js"
+    "remarque": "./cli.js"
   }
 }

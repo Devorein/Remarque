@@ -51,36 +51,38 @@
     justify-content: center;
     align-items: center;
   }
+}
 
-  div.topic-container {
+.app_content_item {
+  &--topic {
     @extend %pad10mar10;
+  }
+  &_header--topic & {
+    @extend %pad5taCfw500marB10;
+  }
+  &--subtopicL1 {
+    @extend %pad10mar10;
+  }
+  &_header--subtopicL1 {
+    @extend %pad5taCfw500marB10;
+  }
 
-    .topic-header {
-      @extend %pad5taCfw500marB10;
-    }
-
-    .subtopic-container {
-      @extend %pad10mar10;
-
-      .subtopic-header {
-        @extend %pad5taCfw500marB10;
-      }
-
-      .subtopicL2-container {
-        @extend %pad10mar10;
-
-        .subtopicL2-header {
-          @extend %pad5taCfw500marB10;
-        }
-
-        .subtopicL3-container {
-          @extend %pad10mar10;
-
-          .subtopicL3-header {
-            @extend %pad5taCfw500marB10;
-          }
-        }
-      }
-    }
+  &--subtopicL2 {
+    @extend %pad10mar10;
+  }
+  &_header--subtopicL2 {
+    @extend %pad5taCfw500marB10;
+  }
+  &--subtopicL3 {
+    @extend %pad10mar10;
+  }
+  &_header--subtopicL3 {
+    @extend %pad5taCfw500marB10;
+  }
+  &--subtopicL4 {
+    @extend %pad10mar10;
+  }
+  &_header--subtopicL4 {
+    @extend %pad5taCfw500marB10;
   }
 }
